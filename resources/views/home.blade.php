@@ -6,7 +6,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are log
+                    Usted se ha identificado!
                 </div>
             </div>
        

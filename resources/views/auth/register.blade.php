@@ -2,7 +2,7 @@
 
 @section('content')
 
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
