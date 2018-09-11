@@ -1,20 +1,17 @@
 
 
 <div class="panel panel-primary">
-                
-
-    <div class="panel-heading">Menu</div>
-
+  <div class="panel-heading">Menu</div>
         <div class="panel-body">
           <ul class="nav nav-pills nav-stacked">
             @if (auth()->guest())
-              <li><a href="/">Bienvenido</a></li>
-              <li><a href="/instrucciones">Instrucciones</a></li>
-              <li><a href="/acerca-de">Acerca de</a></li>
+              <li @if(request()->is('/')) class="active" @endif><a href="/">Bienvenido</a></li>
+              <li @if(request()->is('instrucciones')) class="active" @endif ><a href="/instrucciones">Instrucciones</a></li>
+              <li @if(request()->is('acerca-de')) class="active" @endif><a href="/acerca-de">Acerca de</a></li>
             @else
-              <li><a href="/home">Dashboard</a></li>
+              <li @if(request()->is('home')) class="active" @endif><a href="/home">Dashboard</a></li>
               <li><a href="/ver-reportes">Ver reportes</a></li>
-              <li><a href="/reportar">Crear reporte</a></li>
+              <li @if(request()->is('reportar')) class="active" @endif><a href="/reportar">Crear reporte</a></li>
 
               <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -22,14 +19,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="/usuarios">Usuarios</a></li>
-                  <li><a href="/solicitud">Solicitud</a></li>
+                  <li><a href="/solicitud">Proyectos</a></li>
                   <li><a href="/configuracion">Configuracion</a></li>
                 </ul>
               </li>
             @endif
           </ul>
-
-          </div>
+        </div>
 </div>
 
 

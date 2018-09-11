@@ -30,7 +30,7 @@ Route::get('/acerca-de', 'HomeController@about');
 Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function () {
 
 	Route::get('/usuarios', 'UserController@index');
-	Route::get('/trabajos', 'TrabajosController@index');
+	Route::get('/proyectos', 'ProjectController@index');
 	Route::get('/config', 'ConfigController@index');
 });
 

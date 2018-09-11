@@ -11,13 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-   <link rel="stylesheet" href="//bootswatch.com/3/flatly/bootstrap.css">
+   <link rel="stylesheet" href="//bootswatch.com/3/paper/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="{{ asset('/css/fondo_edit.css') }}">
-    
-    <!--https://bootswatch.com/4/litera/bootstrap.min.css
-    https://bootswatch.com/4/solar/bootstrap.min.css-->
-
-
 
     <!-- Scripts -->
     <script>
@@ -25,13 +20,13 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse">
         
-
-
             <div class="container">
                 <div class="navbar-header">
 
@@ -87,44 +82,30 @@
             </div>
         </nav>
 
-
-
-
-
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    @include('includes.menu')
-                    
+                    @include('includes.menu')     
                 </div>
                 
                 <div class="col-md-9">
                     @yield('content')
-                    
                 </div>
                 
             </div>
-            </div>
-            
         </div>
-
-
-        <script
-
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="/js/app.js"></script>
-
-
-        
     </div>
+
+    <script
+     src="https://code.jquery.com/jquery-3.1.1.min.js"
+     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 
-
-    
 </body>
 </html>

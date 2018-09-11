@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,8 @@ class HomeController extends Controller
     
     public function report()
     {
-        return view('report');
+        //inyectar la variable categories para que se accesible para el foreach de report.blade.php 
+        $categories = category::where('project_id', 1)->get();
+        return view('report')->with(compact('categories'));
     }
 }
