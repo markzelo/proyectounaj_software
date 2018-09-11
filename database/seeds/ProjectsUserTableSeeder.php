@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\ProjectUser;
 
 class ProjectsUserTableSeeder extends Seeder
 {
@@ -11,6 +12,26 @@ class ProjectsUserTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        ProjectUser::create([
+        	'project_id' => 1,
+        	'user_id' => 3,
+        	'level_id' => 1
+		]);
+
+		ProjectUser::create([
+        	'project_id' => 1,
+        	'user_id' => 4,
+        	'level_id' => 2
+		]);
+        ProjectUser::create([
+            'project_id' => 2,
+            'user_id' => 3,
+            'level_id' => 1
+        ]);
+        ProjectUser::create([
+            'project_id' => 2,
+            'user_id' => 3,
+            'level_id' => 1
+        ]);
     }
 }
