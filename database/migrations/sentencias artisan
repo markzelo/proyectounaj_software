@@ -1,0 +1,21 @@
+using model factories
+
+utilizasion de orm
+
+bycrip
+
+make:seeder UserTableSeeder
+
+migrate:refresh --seed
+
+make:auth
+
+make:middleware AAdminMiddleware
+
+
+make:model Category-m
+
+composer dump-autoload
+
+partir la relacion muchos a muchos
+make:migration create_project_user_table --create=project_user
