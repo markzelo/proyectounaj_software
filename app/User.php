@@ -25,12 +25,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //campo oculto
     protected $hidden = [
         'password', 'remember_token',
     ];
 
     //selector de tipo deusuario
-
 
     public function getIsAdminAttribute()
     {
@@ -64,7 +64,7 @@ class User extends Authenticatable
 
 
 
-    //accesos a proyectos
+    //accesos a proyectos para tecnicos
      public function getListOfProjectsAttribute()
     {
         if ($this->role == 1)
@@ -76,8 +76,6 @@ class User extends Authenticatable
 
 
     //funcion scope para listar resultados de busqueda
-
-
 
     public function scopeBusqueda($query,$select_project_id,$dato="")
      {
@@ -98,4 +96,5 @@ class User extends Authenticatable
         
         return  $resultado;
      }
+     
 }
