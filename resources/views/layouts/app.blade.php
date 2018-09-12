@@ -44,12 +44,13 @@
                     </a>
                 </div>
 
+                @if (auth()->check())
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <ul class="nav navbar-nav">
                             <form class="navbar-form">
-                                <div class="form-group">
+                                <div class="btn btn-default btn-xs dropdown-toggle"> <!--btn btn-default btn-xs dropdown-toggle form-group-->
                                     <select name="" class="form-control">
                                         <option value="">Proyecto A</option>
                                     </select>
@@ -57,6 +58,7 @@
                             </form>
                         </ul>
                     </ul>
+                @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

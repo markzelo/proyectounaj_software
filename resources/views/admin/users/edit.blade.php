@@ -4,17 +4,16 @@
 
 @section('content')
 <div class="panel panel-primary">
-    <div class="panel-heading">Reportar</div>
+    <div class="panel-heading">Editar usuario</div>
     <div class="panel-body">
 
-        <!–– seccion para visualizar los notificaciones ––>
+        <!–– seccion para visualizar las notificaciones y errores ––>
         @if (session('notification'))
             <div class="alert alert-success">
                 {{ session('notification') }}
             </div>
         @endif
 
-        <!–– seccion para visualizar los errores ––>
         @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -34,11 +33,11 @@
             </div>
             <div class="form-group">
                 <label for="name">Nombre</label>
-                <input type="text" name="name" class="form-control" value="{{old('name', $user->name)}}">/>
+                <input type="text" name="name" class="form-control" value="{{old('name', $user->name)}}">
             </div>
             <div class="form-group">
                 <label for="name">Contraseña <em>Ingresar solo si se desea modificar</em></label>
-                <input type="text" name="password" class="form-control" value="{{old('password')}}">/>
+                <input type="text" name="password" class="form-control" value="{{old('password')}}">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">Guardar usuario</button>

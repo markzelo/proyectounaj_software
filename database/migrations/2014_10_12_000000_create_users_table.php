@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->smallInteger('role')->default(2); # 0:Admin | 1:Tecnico | 2:Usuario
             $table->rememberToken();
+            $table->SoftDeletes();
             $table->timestamps();
         });
     }

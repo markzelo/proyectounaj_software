@@ -18,7 +18,7 @@ class UserController extends Controller
         $rules = [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed'
+            'password' => 'required|min:6'
         ];
 
         // msj de error personalizado
@@ -77,5 +77,11 @@ class UserController extends Controller
 
     	$user->save();
     	return back()->with('notification', 'Usuario modificado exitosamente.');
+    }
+
+    public function delete($id){
+        $user = User::find($id);
+        $user->delete();
+        return back()->with('notification', 'El ususario se ha eliminado exitosamente.');
     }
 }

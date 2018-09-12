@@ -18,6 +18,7 @@ class AdminMiddleware
         if (!auth() -> check()){
             return redirect('login');
         }
+        
         # 0:Admin | 1:Tecnico | 2:Usuario
         if (auth()->user()-> role != 0) {
             return redirect('home');
