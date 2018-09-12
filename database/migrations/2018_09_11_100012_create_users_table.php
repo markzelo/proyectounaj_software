@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             
             $table->string('name');
-           // $table->string('lastname');
-            
+            $table->string('lastname');
+            $table->string('fhone');
             $table->string('email')->unique();
             $table->string('password');
             
@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
 
             //guardar datos sobre el inicio de sesion
             $table->rememberToken();
+            $table->softDeletes();
 
         //fechas de creacion 
             $table->timestamps();

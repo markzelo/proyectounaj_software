@@ -10,7 +10,7 @@ migrate:refresh --seed
 
 make:auth
 
-make:middleware AAdminMiddleware
+make:middleware AdminMiddleware
 
 
 make:model Category-m
