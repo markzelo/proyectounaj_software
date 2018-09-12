@@ -6,7 +6,8 @@
 <div class="panel panel-primary">
     <div class="panel-heading">Reportar</div>
     <div class="panel-body">
-        <form action="">
+        <form action="" method="POST">
+            {{csrf_field()}}
             <div class="form-group">
                 <label for="category_id">Departamento</label>
                 <select name="category_id" class="form-control">
@@ -17,8 +18,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="severity_id">Severidad</label>
-                <select name="severity_id" class="form-control">
+                <label for="severity">Severidad</label>
+                <select name="severity" class="form-control">
                     <option value="M">Menor</option>
                     <option value="N">Normal</option>
                     <option value="A">Alta</option>
