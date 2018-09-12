@@ -21,4 +21,11 @@ class Category extends Model
     	//una catego pertenece a una 
     	return $this->belongsTo('App\Project');
     }
+
+    public function product()
+
+    {
+    	//una categoria pertenece a un proyecto
+    	return $this->hasMany(Product::class);
+    }
 }

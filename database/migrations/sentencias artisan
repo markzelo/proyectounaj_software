@@ -1,10 +1,13 @@
 using model factories
 
+php artisan make:factory ProductFactory
+
+
 utilizasion de orm
 
 bycrip
 
-make:seeder UserTableSeeder
+make:seeder UsersTableSeeder
 
 migrate:refresh --seed
 
@@ -19,3 +22,4 @@ composer dump-autoload
 
 partir la relacion muchos a muchos
 make:migration create_project_user_table --create=project_user
+
