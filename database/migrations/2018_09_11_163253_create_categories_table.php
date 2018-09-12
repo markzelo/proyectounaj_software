@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
 
             $table->string('name');
+            $table->string('description');
            
             
             // clave foranea hacia proyectos
@@ -24,7 +25,7 @@ class CreateCategoriesTable extends Migration
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects');
 
-
+         //eleiminacion logica
             $table->softDeletes();
             
 
