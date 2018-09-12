@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="//bootswatch.com/3/flatly/bootstrap.css">
+    <!--<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">-->
+    
 
     <!-- Scripts -->
     <script>
@@ -21,6 +23,8 @@
     </script>
 </head>
 <body>
+
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -78,10 +82,22 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3">  
+                    @include('includes.menu') 
+                </div>
+                <div class="col-md-9">
+                    @yield('content')
+                </div>
+          </div>
+        </div>
+
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
 </html>
