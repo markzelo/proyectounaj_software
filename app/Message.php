@@ -9,7 +9,7 @@ class Message extends Model
     //relacion
     public function user()
     {
-    	//1 msj le pertenece a un usuario
+    	//muchos msj le pertenece a un usuario
     	return $this->belongsTo('App\User');
     }
 }

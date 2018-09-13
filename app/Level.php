@@ -3,14 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Level extends Model
 {
-    public function project()
+    use SoftDeletes;
+	protected $fillable=['name','project_id'];
+
+	 public function project()
 
     {
-    	//un nivel le pertenece a un proyecto
+    	//una catego pertenece a una 
     	return $this->belongsTo('App\Project');
     }
 }

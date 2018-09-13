@@ -56,7 +56,7 @@ class Incident extends Model
 
 
 
-    // accessors para el full atributo
+    // accessors para devolver el atributo del accesor
 
     public function getSeverityFullAttribute()
     {

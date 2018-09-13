@@ -31,9 +31,11 @@ class User extends Authenticatable
     ];
 
     //selector de tipo deusuario
+    //creacion de accesor  funciones get 
 
     public function getIsAdminAttribute()
     {
+        //acceso al objeto y usa su atributo
         return $this->role == 0;
     }
     
