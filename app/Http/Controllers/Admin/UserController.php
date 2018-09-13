@@ -8,12 +8,14 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function index()
+    {
     	$users = User::where('role', 1)->get();
     	return view('admin.users.index')->with(compact('users'));
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
     	//reglas de validacion
         $rules = [
             'name' => 'required|max:255',
@@ -46,13 +48,14 @@ class UserController extends Controller
     	return back()->with('notification', 'Usuario registrado exitosamente.');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
     	$user = User::find($id);
     	return view('admin.users.edit')->with(compact('user'));
     }
 
-    public function update($id, Request $request){
-    	
+    public function update($id, Request $request)
+    {
     	$rules = [
             'name' => 'required|max:255',
             'password' => 'min:6'
@@ -64,14 +67,14 @@ class UserController extends Controller
             'password.min' => 'La contraseña debe tener mas de 6 caracteres.'
         ];
 
-
     	$this->validate($request, $rules, $messages);
 
     	$user = User::find($id);
     	$user->name = $request->input('name');
 
     	$password = $request->input('password');
-    	if ($password) {
+
+    	if ($password){
     		$user->password = bcrypt($password);
     	}
 
@@ -79,7 +82,8 @@ class UserController extends Controller
     	return back()->with('notification', 'Usuario modificado exitosamente.');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $user = User::find($id);
         $user->delete();
         return back()->with('notification', 'El ususario se ha eliminado exitosamente.');

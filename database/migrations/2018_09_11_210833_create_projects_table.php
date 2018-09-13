@@ -13,10 +13,13 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) 
+        {
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->date('start')->nulleable();
+            $table->SoftDeletes();
             $table->timestamps();
         });
     }

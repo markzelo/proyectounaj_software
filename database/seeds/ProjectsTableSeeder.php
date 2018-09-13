@@ -14,12 +14,14 @@ class ProjectsTableSeeder extends Seeder
     {
         Project::create([
         	'name' => 'Proyecto A',
-        	'description' => "El proyecto A consiste en ..."
+        	'description' => "El proyecto A consiste en ...",
+            'start' => "2018-09-12"
         ]);
 
         Project::create([
         	'name' => 'Proyecto B',
-        	'description' => "El proyecto B consiste en ..."
+        	'description' => "El proyecto B consiste en ...",
+            'start' => "2018-09-11"
         ]);
     }
 }

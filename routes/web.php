@@ -28,7 +28,7 @@ Route::get('/acerca-de', 'HomeController@about');
 //metodod desde la pagina de routes
 //damos acceso diferente como admini
 //name space para los 3 cotroladores
-Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function () {
+Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function (){
 
 	Route::get('/usuarios', 'UserController@index');
 	Route::post('/usuarios', 'UserController@store');
@@ -38,6 +38,11 @@ Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function () {
 	Route::get('/usuario/{id}/eliminar', 'UserController@delete');
 
 	Route::get('/proyectos', 'ProjectController@index');
+	Route::post('/proyectos', 'ProjectController@store');
+	Route::get('/proyecto/{id}', 'ProjectController@edit');
+	Route::post('proyecto/{id}', 'ProjectController@update');
+	Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
+	Route::get('/proyecto/{id}/restaurar', 'ProjectController@restore');
 
 	Route::get('/config', 'ConfigController@index');
 });
