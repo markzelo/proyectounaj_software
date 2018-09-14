@@ -11,14 +11,21 @@ class Category extends Model
 
 
 
-//campos requeridos
+    //campos requeridos para rellenar
     protected $fillable = ['name','project_id']; 
 
 
     public function project()
 
     {
-    	//una catego pertenece a una 
+    	//mas de una  categoria pertenece a unproyecto
     	return $this->belongsTo('App\Project');
+    }
+
+    public function product()
+
+    {
+    	//una categoria pertenece a muchos producto
+    	return $this->hasMany(Product::class);
     }
 }

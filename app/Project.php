@@ -17,12 +17,11 @@ class Project extends Model
     ];
 
     public static $messages = [
-        'name.required' => 'Debera  ingresar un nombre para el proyecto.',
-        'start.date' => 'La fecha esta mal ingresado por el tipo de formato elegido.'
+        'name.required' => 'Es necesario ingresar un nombre para el proyecto.',
+        'start.date' => 'La fecha no tiene un formato adecuado.'
     ];
 
     //campos que se pueden asignar de forma masiva
-
     protected $fillable = [
         'name', 'description', 'start'
     ];
@@ -30,7 +29,7 @@ class Project extends Model
     // relationships
     public function categories()
     {
-        //un proyecto tiene muchas 
+        //un proyecto tiene muchas categorias
         return $this->hasMany('App\Category');
     }
 
@@ -39,7 +38,7 @@ class Project extends Model
         return $this->hasMany('App\Level');
     }
 
-//relacion muchos amuchos con usuarios
+    
     public function users()
     {
         return $this->belongsToMany('App\User');
