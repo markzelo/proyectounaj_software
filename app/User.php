@@ -31,7 +31,7 @@ class User extends Authenticatable
     ];
 
     //selector de tipo deusuario
-    //creacion de accesor  funciones get 
+    //creacion de accesor  funciones get definicion de traibutos que no existen en la tabla
 
     public function getIsAdminAttribute()
     {
@@ -66,7 +66,7 @@ class User extends Authenticatable
 
 
 
-    //accesos a proyectos para tecnicos
+    //accesor para proyectos para tecnicos
      public function getListOfProjectsAttribute()
     {
         if ($this->role == 1)
