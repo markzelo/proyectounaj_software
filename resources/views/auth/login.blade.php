@@ -1,7 +1,8 @@
 @extends('theme.default')
 
 @section('content')
-<div class="col-lg-12">
+<div class="pann">
+    <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
@@ -60,5 +61,6 @@
                     </form>
                 </div>
             </div>
+    </div>
 </div>
 @endsection
