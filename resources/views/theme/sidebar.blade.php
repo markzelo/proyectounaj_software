@@ -15,7 +15,7 @@
 
                 <li>
                     <!-- Definir vista -->
-                    <a href="#"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
+                    <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
                 </li>
 
                 <li>

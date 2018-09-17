@@ -19,6 +19,8 @@ Route::get('/prueba', function () {
     return view('prueba');
 });
 
+Route::get('/reportar', 'HomeController@getReport');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
