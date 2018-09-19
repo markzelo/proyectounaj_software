@@ -21,7 +21,7 @@ Route::get('/instrucciones', function () {
 
 Route::get('/acerca-de', function () {
     return view('credits');
-
+});
 
 //---------------------------------------------------------------
 
