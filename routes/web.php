@@ -36,7 +36,43 @@ Route::get('/seleccionar/proyecto/{id}', 'HomeController@selectProject');
 //-------------------------------------------------------------------
 
 
+//
+// Incident
 
+Route::get('/reportar', 'IncidentController@create');//devuelve la vista
+Route::post('/reportar', 'IncidentController@store');//guardado
+//pasar parametros con id
+Route::get('/incidencia/{id}/editar', 'IncidentController@edit');
+Route::post('/incidencia/{id}/editar', 'IncidentController@update');
+
+//ver incidencia especifica
+Route::get('/ver/{id}', 'IncidentController@show');
+Route::get('/ver', 'IncidentController@reportes');
+
+// ver tods las inicidencias Route::get('/ver', 'IncidentController@');
+
+Route::get('/incidencia/{id}/atender', 'IncidentController@take');
+Route::get('/incidencia/{id}/resolver', 'IncidentController@solve');
+Route::get('/incidencia/{id}/abrir', 'IncidentController@open');
+Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
+
+
+//ver productos
+Route::get('/productos', 'ProductController@solutions');
+
+//mensajeria chat store registra nuevos msjs
+Route::post('/mensajes', 'MessageController@store');
+
+//reportes en pdf
+Route::get('/reportes', 'PdfController@index');
+Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_porusuario');
+
+
+
+
+//metodod desde la pagina de routes
+//damos acceso diferente como admini
+//name space para los 3 cotroladores
 //----------permisos de admin
 Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
 
