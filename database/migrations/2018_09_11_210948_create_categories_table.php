@@ -16,13 +16,14 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('description');
+            //$table->string('description')->nullable();
             //clave foranea hacia proyectos
             $table->integer('project_id')->unsigned(); //establecer campo (project_id)
             $table->foreign('project_id')->references('id')->on('projects'); //hace que el campo sea una clave foranea que hace referencia
                                                                             // a la clave id en la tabla projects
-
+            $table->softDeletes();
             $table->timestamps();
+
         });
     }
 

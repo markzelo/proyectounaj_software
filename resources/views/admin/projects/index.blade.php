@@ -61,24 +61,20 @@
                     <td>{{$project->description}}</td>
                     <td>{{$project->start ?: 'Sin informacion'}}</td>
                     <td>
-                        @if(!$project->trashed())
-                        <a href="/proyecto/{{$project->id}}" class="btn btn-sm btn-primary" title="Editar">
-                            <span class="glyphicon glyphicon-pencil"></span></a>
-                        @endif
-                        
                         @if($project->trashed())
-                        <a href="/proyecto/{{$project->id}}/restaurar" class="btn btn-sm btn-succes" title="restaurar"><span class="glyphicon glyphicon-repeat"></span></a>
+                        <a href="/proyecto/{{$project->id}}/restaurar" class="btn btn-sm btn-succes" title="Restaurar"><span class="glyphicon glyphicon-repeat"></span></a>
 
                         @else
+                        <a href="/proyecto/{{$project->id}}" class="btn btn-sm btn-primary" title="Editar">
+                            <span class="glyphicon glyphicon-pencil"></span></a>
+                        
                         <a href="/proyecto/{{$project->id}}/eliminar" class="btn btn-sm btn-danger" title="Baja"><span class="glyphicon glyphicon-remove"></span></a>
                         @endif
                     </td>
                 </tr>
                 @endforeach
             </tbody>
-
         </table>
-
     </div>
 </div>
      

@@ -28,8 +28,10 @@ class ProjectController extends Controller
     public function edit($id)
     {
     	$project = Project::find($id);
+        $categories = $project->categories;
+        $levels = $project->levels;//Level::where('project_id', $id)->get();//$project->levels;
 
-    	return view('admin.projects.edit')->with(compact('project'));
+    	return view('admin.projects.edit')->with(compact('project', 'categories', 'levels'));
     }
 
     public function update($id, Request $request)

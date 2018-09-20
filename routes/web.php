@@ -30,13 +30,14 @@ Route::get('/acerca-de', 'HomeController@about');
 //name space para los 3 cotroladores
 Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function (){
 
+	// User
 	Route::get('/usuarios', 'UserController@index');
 	Route::post('/usuarios', 'UserController@store');
-
 	Route::get('/usuario/{id}', 'UserController@edit');
 	Route::post('/usuario/{id}', 'UserController@update');
 	Route::get('/usuario/{id}/eliminar', 'UserController@delete');
 
+	// Project
 	Route::get('/proyectos', 'ProjectController@index');
 	Route::post('/proyectos', 'ProjectController@store');
 	Route::get('/proyecto/{id}', 'ProjectController@edit');
@@ -44,7 +45,21 @@ Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function (){
 	Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 	Route::get('/proyecto/{id}/restaurar', 'ProjectController@restore');
 
-	Route::get('/config', 'ConfigController@index');
+	// Category
+	Route::post('/categorias', 'CategoryController@store');
+	Route::post('/categoria/editar', 'CategoryController@update');
+	Route::post('/categoria/{id}/eliminar', 'CategoryController@delete');
+
+	//Level
+	Route::post('/niveles', 'LevelController@store');
+	Route::post('/nivel/editar', 'LevelController@update');
+	Route::post('/nivel/{id}/eliminar', 'LevelController@delete');
+
+	// Project-User
+	Route::post('/proyecto-usuario', 'ProjectUserController@store');
+	Route::post('/proyecto-usuario/{id}/eliminar', 'ProjectUserController@delete');
+
+	//Route::get('/config', 'ConfigController@index');
 });
 
 Route::group(['middleware' => 'guest',"namespace"=>"Guest"], function () {

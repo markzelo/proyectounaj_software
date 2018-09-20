@@ -23,6 +23,15 @@ class Project extends Model
     ];
 
     protected $fillable = [
-        'name', 'description', 'start',
+        'name', 'description', 'start'
     ];
+
+    public function categories(){
+    	return $this->hasMany('App\Category');
+    }
+
+    public function levels(){
+    	return $this->hasMany('App\Level');
+    }
+
 }
