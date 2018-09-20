@@ -14,17 +14,17 @@
 		        <th>Estado</th>
 		        <th>Fecha de creacion</th>
 		        <th>Titulo</th>
+		        <th>Responsable</th>
 		      </tr>
 		    </thead>
 		    <tbody>
-		      <tr>
-		      	<td>Cod</td>
-		      	<td>Cat</td>
-		      	<td>Sev</td>
-		      	<td>Est</td>
-		      	<td>Fec</td>
-		      	<td>Tit</td>
-		      </tr>
+		    	<td>cod</td>
+		    	<td>cat</td>
+		    	<td>sev</td>
+		    	<td>est</td>
+		    	<td>fec</td>
+		    	<td>tit</td>
+		    	<td>res</td>
 		    </tbody>
 		  </table>
 		</div>
