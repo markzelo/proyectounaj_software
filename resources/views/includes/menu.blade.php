@@ -45,6 +45,9 @@
 														<li @if(request()->is('reportar')) class="active" @endif>
 															<a href="/reportar">Reportar incidencia</a>
 														</li>
+														<li @if(request()->is('reportar')) class="active" @endif>
+															<a href="/reportar">contenidos</a>
+														</li>
 																		 
 
 												        @if (auth()->user()->is_admin)
