@@ -31,13 +31,29 @@
 										                    </ul>
 										                  </li>
 
-
  --}}
+                                                        <li class="treeview">
+											              <a href="#">
+											                <i class="fa fa-fw fa-database"></i> <span>contenidos de libreria</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+ 														<li class="treeview">
+											              <a href="#">
+											                <i class="fa fa-fw fa-database"></i> <span>eventos</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+											            <li class="treeview">
+											              <a href="#">
+											                <i class="fa fa-fw fa-database"></i> <span>Analisis y Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
 
 
 														@endif 
 														 <li @if(request()->is('reportar')) class="active" @endif>
-															<a href="/productos">Productos</a>
+															<a href="/productos">Catlogo de productos exclusivos</a>
 														</li> 
 
 

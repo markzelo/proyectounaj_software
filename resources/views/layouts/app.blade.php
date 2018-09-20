@@ -12,7 +12,12 @@
 
     <!-- Styles -->
    <link rel="stylesheet" href="https://bootswatch.com/3/superhero/bootstrap.css">
+   
+
+{{-- helpers --}}
    <link rel="stylesheet" type="text/css" href="{{ asset('/css/fondo_edit.css') }}">
+
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css">
     
     <!--https://bootswatch.com/4/litera/bootstrap.min.css
     https://bootswatch.com/4/solar/bootstrap.min.css
@@ -30,6 +35,13 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+
+    
+
+
+
 </head>
 <body>
     <div id="app">

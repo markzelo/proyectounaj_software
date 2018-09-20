@@ -80,7 +80,7 @@
                                         </a>
                                         @endif
 
-                                      
+                                    {{--   si sos cliente tenes privilegios para --}}
                                        @if (auth()->user()->id == $incident->client_id)
                                             @if ($incident->active)
                                                 <a href="/incidencia/{{ $incident->id }}/resolver" class="btn btn-info btn-sm" id="incident_btn_solve">
