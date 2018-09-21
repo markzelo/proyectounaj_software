@@ -53,7 +53,7 @@
 
 														@endif 
 														 <li @if(request()->is('reportar')) class="active" @endif>
-															<a href="/productos">Catlogo de productos exclusivos</a>
+															<a href="/productos">Catlogo de servicios exclusivos</a>
 														</li> 
 
 
