@@ -68,6 +68,10 @@ Route::get('/reportes', 'PdfController@index');
 Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_porusuario');
 
 
+//eventos--------------------------------------------------------------
+Route::resource('evento','EventoController');
+Route::get('api','EventoController@api'); //ruta que nos devuelve los eventos en formato json
+
 
 
 //metodod desde la pagina de routes

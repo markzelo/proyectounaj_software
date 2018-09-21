@@ -49,6 +49,13 @@
                                                 <label for="description">Descripcion</label>
                                                 <textarea name="description" class="form-control">{{ old("description") }}</textarea>
                                             </div>
+
+                                            <div class="form-group">
+                                                 <div class="col-md-4">
+                                                <label for="description">arrastra imagen de incidencia si lo desea</label>
+                                                <div class="dropzone"></div>
+                                                </div>
+                                            </div>
                                             <div class="form-group">
                                                 <button class="btn btn-primary">Registrar incidente</button>
                                                 
