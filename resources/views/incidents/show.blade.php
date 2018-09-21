@@ -68,7 +68,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>Adjuntos</th>
-                                                    <td id="incident_attachment">No se han adjuntado archivos</td>
+                                                    <td id="incident_attachment">No se ha  adjuntado archivos</td>
                                                 </tr>
                                             </tbody>
                                         </table>

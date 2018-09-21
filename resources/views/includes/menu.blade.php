@@ -34,7 +34,7 @@
  --}}
                                                         <li class="treeview">
 											              <a href="#">
-											                <i class="fa fa-fw fa-database"></i> <span>contenidos de libreria</span> <i class="fa fa-angle-left pull-right"></i>
+											                <i class="fa fa-fw fa-database"></i> <span>contenidos de librerias</span> <i class="fa fa-angle-left pull-right"></i>
 											              </a>
 											            </li>
 
