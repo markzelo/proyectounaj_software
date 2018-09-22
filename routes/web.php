@@ -69,8 +69,10 @@ Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_poru
 
 
 //eventos--------------------------------------------------------------
-Route::resource('evento','EventoController');
-Route::get('api','EventoController@api'); //ruta que nos devuelve los eventos en formato json
+//Eventos Calendario
+Route::get('/gcalendar', 'EventController@index');
+Route::post('/events', 'EventController@addEvent')->name('events.add');
+
 
 
 

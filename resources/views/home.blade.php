@@ -8,12 +8,14 @@
                 <div class="panel-body">
 
                     @if(auth()->user()->is_support)
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Hola {{Auth::user()->name}},</h3>
 
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             <h3 class="panel-title">reportadas a mi </h3>
                         </div>
                         <div class="panel-body">
+                          
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -44,6 +46,7 @@
                                     
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
 

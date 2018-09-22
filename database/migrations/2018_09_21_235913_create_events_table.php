@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventosTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,21 @@ class CreateEventosTable extends Migration
      */
    public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->datetime('fecha');
-            $table->string('lugar');
-            $table->mediumText('descripcion');
+            $table->string('title');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }
- 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::drop('eventos');
+        Schema::drop("events");
     }
 }

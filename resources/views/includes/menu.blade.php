@@ -23,7 +23,7 @@
 											            </li>
 
  														<li class="treeview">
-											              <a href="#">
+											              <a href='/gcalendar'>
 											                <i class="fa fa-fw fa-database"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
 											              </a>
 											            </li>

@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call(IncidentsTableSeeder::class);
 
         $this->call(ProductsTableSeeder::class);
+        $this->call(AddDummyEventTableSeeder::class);
+        
 
     }
 }

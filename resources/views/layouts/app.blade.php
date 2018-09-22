@@ -18,6 +18,24 @@
    <link rel="stylesheet" type="text/css" href="{{ asset('/css/fondo_edit.css') }}">
 
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.js/2.1.3/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
+   {{--  <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        
+    <script type="text/javascript" src="/plugins/fullcalendar/lib/moment.min.js"></script>
+    <script type="text/javascript" src="/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/plugins/fullcalender/locale/es.js"></script>
+   
+   <link src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/> --}}
+
+
+
+  {{--  <link rel="stylesheet"  href='/plugins/fullcalendar/fullcalendar.min.css'>
+   <link rel="stylesheet" href='/plugins/datatables/jquery.dataTables.css'> --}}
     
     <!--https://bootswatch.com/4/litera/bootstrap.min.css
     https://bootswatch.com/4/solar/bootstrap.min.css
@@ -26,6 +44,7 @@
 
 -->
 
+   
 
 
 
@@ -35,6 +54,28 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+    
+
+
+    {{--  <script>
+        //inicializamos el calendario al cargar la pagina
+        $(document).ready(function() {
+ 
+            $('#calendar').fullCalendar({
+ 
+                header: {
+                    left: 'prev,next today myCustomButton',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+ 
+            });
+ 
+        });
+    </script> --}}
+
+    {{-- cargar imagenes a reportes --}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
@@ -154,7 +195,12 @@
     <!-- Scripts -->
         <script src="/js/app.js"></script>
 
-    
+        <!-- jQuery 2.1.4 -->
+        <!-- fullCalendar 2.2.5 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+        
+       
     @yield('scripts')
 </body>
 </html>

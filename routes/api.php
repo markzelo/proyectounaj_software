@@ -15,3 +15,10 @@ use Illuminate\Http\Request;
 
 // Web API
 Route::get('/proyecto/{id}/niveles', 'Admin\LevelController@byProject');
+
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:api');
+
+// Route::resource('cal', 'gCalendarController');
+// Route::get('oauth', 'gCalendarController@oauth')->name('oauthCallback');
