@@ -13,6 +13,10 @@
       <div class="panel-heading">
         <h3 class="panel-title">productos comerciales de mantenimiento </h3>
       </div>
+      <div class="team">
+      <div class="row">
+        <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round" 
+        >nuevos productos</a>
 
       <table class="table">
         <thead>
@@ -32,30 +36,38 @@
               <td class="text-center">{{ $product->id }}</td>
               <td>{{ $product->name }}</td>
               <td>{{ $product->description }}</td>
-              <td>{{ $product->category ? $$product->category->name : "general" }}</td>
-              <td class="text-right">&euro; {{ $product->price }}</td>
+              <td>{{ $product->category ? $product->category->name:"general" }}</td>
+              <td class="text-right">&euro;{{ $product->price }}</td>
               <td class="td-actions text-right">
+              <button class="button" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
+                <i class="fa fa-user">
+              </button>
 
-                <a href="#" rel="tooltip" title="Ver Productos" class="btn btn-info btn-simple btn-xs">
-                  <i class="fa fa-info"></i>
-                </a>
-                <a href="#" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                  <i class="fa fa-edit"></i>
-                </a>
-                 <button type="button" rel="tooltip" title="Ver imagenes del productos" class="btn btn-warning btn-simple btn-xs">
-                  <i class="fa fa-info"></i>
+               <button class="button" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
+                <i class="fa fa-edit">
+              </button>
 
-                <button type="submit" rel="tooltip" title="eliminar" class="btn btn-danger btn-simple btn-xs">
-                  <i class="fa fa-times"></i>
-                </button>
+               <button class="button" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
+                <i class="fa fa-user">
+              </button>
+
               </td>
+
+
+
+
             </tr>
+            
+             
+          
             @endforeach
 
           </tbody>
         </table>
-        {{ $products->links() }}
-        
+       {{--  {{ $products->links() }} --}}
+        </div>
+        </div>
+        {{ $products->links()}}s
 
       </div>
 

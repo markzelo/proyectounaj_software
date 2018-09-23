@@ -34,10 +34,36 @@
 											              </a>
 											            </li>
 
+											            <li class="treeview">
+											              <a href='/charts'>
+											                <i class="fa fa-fw fa-database"></i> <span>Graficas</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+											            <li class="treeview">
+											              <a href='/PdfDemo'>
+											                <i class="fa fa-fw fa-database"></i> <span>VER EN PDF</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+											            <li class="treeview">
+											              <a href='/PdfDemo'>
+											                <i class="fa fa-fw fa-database"></i> <span>visor de registro</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+											            <li class="treeview">
+											              <a href='/PdfDemo'>
+											                <i class="fa fa-fw fa-database"></i> <span>control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
+											              </a>
+											            </li>
+
+
+
 
 														@endif 
 														 <li @if(request()->is('catalogos')) class="active" @endif>
-															<a href="/productos">Catalogo de servicios pagos</a>
+															<a href="/productos">Catalogo de servicios </a>
 														</li> 
 
 

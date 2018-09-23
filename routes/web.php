@@ -58,20 +58,41 @@ Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
 
 
 //ver productos
-Route::get('/productos', 'ProductController@solutions');
+Route::get('/productos', 'ProductController@index');//listas
+Route::get('/productos/{id}/images', 'ImageController@index');//listas de imagenes por producto
+
+Route::get('/admin/products/create', 'ProductController@create');//listas
+Route::post('/admin/products', 'ProductController@store');//listas
+Route::get('/admin/products', 'ProductController@index');//listas
+
+
+
 
 //mensajeria chat store registra nuevos msjs
 Route::post('/mensajes', 'MessageController@store');
 
 //reportes en pdf
-Route::get('/reportes', 'PdfController@index');
-Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_porusuario');
+// Route::get('/reportes', 'PdfController@index');
+// Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_porusuario');
 
 
 //eventos--------------------------------------------------------------
 //Eventos Calendario
 Route::get('/gcalendar', 'EventController@index');
 Route::post('/events', 'EventController@addEvent')->name('events.add');
+
+//ver pdf
+
+Route::get('/PdfDemo', ['as'=>'PdfDemo','uses'=>'PdfDemoController@index']);
+Route::get('/sample-pdf', ['as'=>'SamplePDF','uses'=>'PdfDemoController@samplePDF']);
+Route::get('/save-pdf', ['as'=>'SavePDF','uses'=>'PdfDemoController@savePDF']);
+Route::get('/download-pdf', ['as'=>'DownloadPDF','uses'=>'PdfDemoController@downloadPDF']);
+Route::get('/html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'PdfDemoController@htmlToPDF']);
+
+//graficas
+Route::get('/charts', 'ChartController@index')->name('chart.index');
+
+
 
 
 
@@ -118,6 +139,8 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
     // Project-User-------------------------------------------
     Route::post('/proyecto-usuario', 'ProjectUserController@store');
     Route::get('/proyecto-usuario/{id}/eliminar', 'ProjectUserController@delete');
+
+
 
 
 
