@@ -1,59 +1,21 @@
-<header>
-    <!-- header-area start -->
-    <div id="sticker" class="header-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-
-            <!-- Navigation -->
-            <nav class="navbar navbar-default">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-                <!-- Brand -->
-                <a class="navbar-brand page-scroll sticky-logo" href="/welcome">
-                  <h1><span>_</span>SCIT</h1>
-                  <!-- Uncomment below if you prefer to use an image logo -->
-                  <!-- <img src="img/logo.png" alt="" title=""> -->
-								</a>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="navbar-collapse main-menu bs-example-navbar-collapse-1 collapse" id="navbar-example" aria-expanded="false" style="height: 1px;">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
-                  </li>
-                  <li class="">
-                    <a class="page-scroll" href="#about">About</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#services">Services</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#team">Team</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#blog">Blog</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- navbar-collapse -->
-            </nav>
-            <!-- END: Navigation -->
-          </div>
-        </div>
-      </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#myPage">< <span>_</span>SCIT ></a>
     </div>
-    <!-- header-area end -->
-  </header>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ACERCA</a></li>
+        <li><a href="#services">CARACTERISTICAS</a></li>
+        <li><a href="#myCarousel">TECNOLOGIAS</a></li>
+        <li><a href="#grid">SERVICIOS</a></li>
+        <li><a href="/home">INGRESAR</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
