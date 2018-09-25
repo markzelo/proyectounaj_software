@@ -61,10 +61,13 @@ Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
 Route::get('/productos', 'ProductController@index');//listas
 Route::get('/productos/{id}/images', 'ImageController@index');//listas de imagenes por producto
 
-Route::get('/admin/products/create', 'ProductController@create');//listas
-Route::post('/admin/products', 'ProductController@store');//listas
-Route::get('/admin/products', 'ProductController@index');//listas
+Route::get('/admin/products', 'ProductController@index');//listado
+//-----------------------------------------------------------------------------------
 
+Route::get('/admin/products/create', 'ProductController@create');//registrar
+Route::post('/admin/products', 'ProductController@store');//guardar
+Route::get('/admin/products/{id}/edit', 'ProductController@edit');//edicion
+Route::post('/admin/products/{id}/edit', 'ProductController@update');//actualizar
 
 
 

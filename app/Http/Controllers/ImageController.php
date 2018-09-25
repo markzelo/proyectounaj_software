@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ProductImage;
 
 class ImageController extends Controller
 {
@@ -12,6 +13,7 @@ class ImageController extends Controller
     	$images= $product->images;
     	return view("products.images.index")->with(compact("product","images"));
     }
+
     public function store(Request $request){
 
     	//guradar iamgenes del proyecto

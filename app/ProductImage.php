@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductImage extends Model
 {
-    return $this->belongsTo(Product::class);
+	//esto pertene a un solo producto
+	public function products(){
+		return $this->belongsTo(Product::class);
+	}
 }

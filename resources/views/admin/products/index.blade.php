@@ -36,6 +36,7 @@
               <td class="text-center">{{ $product->id }}</td>
               <td>{{ $product->name }}</td>
               <td>{{ $product->description }}</td>
+       {{--        opreacion  si existe una categoria ono es lo que se muestra para el crud --}}
               <td>{{ $product->category ? $product->category->name:"general" }}</td>
               <td class="text-right">&euro;{{ $product->price }}</td>
               <td class="td-actions text-right">
@@ -43,11 +44,13 @@
                 <i class="fa fa-user">
               </button>
 
-               <button class="button" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
-                <i class="fa fa-edit">
-              </button>
+            {{--   se parte la cadena --}}
 
-               <button class="button" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
+               <a href="{{ url("/admin/products/".$product->id."/edit") }}" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
+                <i class="fa fa-edit">
+              </a>
+
+               <button class="button" rel="tooltip" title="eliminar producto" class="btn btn-info btn-simple btn-xs">
                 <i class="fa fa-user">
               </button>
 
@@ -64,10 +67,10 @@
 
           </tbody>
         </table>
-       {{--  {{ $products->links() }} --}}
+       {{ $products->links() }}
         </div>
         </div>
-        {{ $products->links()}}s
+        
 
       </div>
 

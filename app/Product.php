@@ -10,13 +10,15 @@ class Product extends Model
 
     {
     	//una producto pertenece a una categoria
-    	return $this->belongsTo(Product::class);
+        //a revision
+        //
+    	return $this->belongsTo(Category::class);
     }
     
      public function images()
 
     {
-    	
-    	return $this->hasMany(ProductImages::class);
+    	//un producto tiene muchas imagenes
+    	return $this->hasMany(ProductImage::class);
     }
 }

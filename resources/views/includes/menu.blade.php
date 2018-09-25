@@ -83,6 +83,11 @@
 														    	<li><a href="/usuarios">Usuarios</a></li>
 															   <li><a href="/proyectos">Proyectos</a></li>
 															   <li><a href="/config">CONFIGURACIO-PANEL</a></li>
+															   <li class="treeview">
+															   	<a href='/admin/products'>
+															   		<i class="fa fa-fw fa-database"></i> <span>edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
+															   	</a>
+															   </li>
 
 														    </ul>
 														 </li>

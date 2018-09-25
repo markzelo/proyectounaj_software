@@ -22,7 +22,7 @@ class Category extends Model
     	return $this->belongsTo('App\Project');
     }
 
-    public function product()
+    public function products()
 
     {
     	//una categoria pertenece a muchos producto
