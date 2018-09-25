@@ -85,7 +85,14 @@ class HomeController extends Controller
         return back();
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+    public function getReport()
+    {
+        return view('report');
+    }
+>>>>>>> rama_agustin
 }

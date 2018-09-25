@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/instrucciones', function () {
     return view('instructions');
 });
@@ -27,6 +28,13 @@ Route::get('/acerca-de', function () {
 
 
 
+=======
+Route::get('/prueba', function () {
+    return view('prueba');
+});
+
+Route::get('/reportar', 'HomeController@getReport');
+>>>>>>> rama_agustin
 
 Auth::routes();
 

@@ -1,8 +1,14 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 @section('content')
+<<<<<<< HEAD
 
 <div class="panel panel-default">
+=======
+<div class="pann">
+    <div class="col-lg-12">
+            <div class="panel panel-default">
+>>>>>>> rama_agustin
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
@@ -59,6 +65,11 @@
                         </div>
                     </form>
                 </div>
+<<<<<<< HEAD
+=======
+            </div>
+    </div>
+>>>>>>> rama_agustin
 </div>
  
 @endsection

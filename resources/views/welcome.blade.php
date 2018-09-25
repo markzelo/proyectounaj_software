@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('layouts.app')
 
 
@@ -13,3 +14,6 @@
     </div>
 </div>
 @endsection
+=======
+@extends('welcomeTheme.default')
+>>>>>>> rama_agustin
