@@ -243,7 +243,9 @@
 </div>
 <script type="text/javascript">
 var params={
-'url':'http://streaming.latina101.com.ar:8080/RadioLatina?hash/;',
+// 'url':'http://streaming.latina101.com.ar:8080/RadioLatina?hash/;',
+'url':'http://198.105.216.204/proxy/mcradio?mp=/;',
+
 'lang':'es',
 'codec':'mp3',
 'volume':100,
