@@ -5,6 +5,13 @@
       <div class="panel-heading">menu</div>
 
 		    <div class="panel-body">
+		    	   <!-- Logo -->
+             {{--  <li>
+                  <div class="logo-wrapper waves-light">
+                      <a href=""><img src="" class="img-fluid flex-center"></a>
+                  </div>
+              </li> --}}
+              <!--/. Logo -->
 		                   
 			    <ul class="nav nav-pills nav-stacked">
 								  @if (auth()->check())

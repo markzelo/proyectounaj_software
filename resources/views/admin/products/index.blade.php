@@ -54,7 +54,7 @@
                   <i class="fa fa-edit">
                   </a>
                   <a href="{{ url("/admin/products/".$product->id."/images") }}" rel="tooltip" title="ver imagenes del producto" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-info">
+                    <i class="fa fa-camara">
                     </a>
                   <button type="submit" rel="tooltip" title="eliminar producto" class="btn btn-info btn-simple btn-xs">
                     <i class="fa fa-times">

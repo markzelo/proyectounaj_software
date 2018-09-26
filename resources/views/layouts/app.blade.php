@@ -87,11 +87,10 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
-        
-
 
             <div class="container">
                 <div class="navbar-header">
+
 
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -203,4 +202,69 @@
        
     @yield('scripts')
 </body>
+
+{{-- <!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!-- Video -->
+          <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/D4dyPBJeTko" allowfullscreen></iframe>
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">2018 Copyright:
+      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Scit.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer --> --}}
+ <!-- mi radio -->
+<script type="text/javascript" src="http://www.netyco.com:82/radio-x-internet/player/player.js"></script>
+<div id="radioload">Tu radio en Internet <a alt="Transmite tu radio por internet, setreaming gratis con Netyco, servidores de radio por internet" href="http://www.netyco.com/radio-x-internet/radio.php">Netyco Argentina</a>
+</div>
+<script type="text/javascript">
+var params={
+'url':'http://streaming.latina101.com.ar:8080/RadioLatina?hash/;',
+'lang':'es',
+'codec':'mp3',
+'volume':100,
+'autoplay':false,
+'buffering':10,
+'title':'mi%20radio',
+'welcome':'solo escucha',
+'bgcolor':'#FFFFFF',
+'winmedia':false,
+'realplayer':false,
+'quicktime':false,
+'html5':true,
+'celulares':false,
+'skin':'mcclean',
+'width':180,
+'height':60
+};Netyco.insert(params);
+</script>
+<!-- FIN: Fin del codigo de tu reproductor de radio -->
+
+
+
+
 </html>
