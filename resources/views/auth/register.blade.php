@@ -1,6 +1,10 @@
 @extends('theme.default')
 
 @section('content')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 391473492d0fc978aef3cd1e80b7c71f3582209a
 <div class="pann">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -18,6 +22,34 @@
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
+                            <label for="lastname" class="col-md-4 control-label">Lastname</label>
+
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required autofocus>
+
+                                @if ($errors->has('lastname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('lastname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('fhone') ? ' has-error' : '' }}">
+                            <label for="fhone" class="col-md-4 control-label">Phone</label>
+
+                            <div class="col-md-6">
+                                <input id="fhone" type="text" class="form-control" name="fhone" value="{{ old('fhone') }}" required autofocus>
+
+                                @if ($errors->has('fhone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('fhone') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -69,6 +101,7 @@
                     </form>
                 </div>
             </div>
+      
         </div>
 </div>
 @endsection
