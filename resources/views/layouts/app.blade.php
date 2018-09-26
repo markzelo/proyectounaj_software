@@ -213,7 +213,7 @@
       <div class="row d-flex justify-content-center">
 
         <!--Grid column-->
-        <div class="col-md-6">
+        <div class="col-md-4">
 
           <!-- Video -->
           <div class="embed-responsive embed-responsive-16by9 mb-4">
@@ -239,7 +239,7 @@
   <!-- Footer --> --}}
  <!-- mi radio -->
 <script type="text/javascript" src="http://www.netyco.com:82/radio-x-internet/player/player.js"></script>
-<div id="radioload">Tu radio en Internet <a alt="Transmite tu radio por internet, setreaming gratis con Netyco, servidores de radio por internet" href="http://www.netyco.com/radio-x-internet/radio.php">Netyco Argentina</a>
+<div id="radioload">Tu radio en Internet <a alt=" radio por internet" href="">Scit corporacion</a>
 </div>
 <script type="text/javascript">
 var params={
@@ -260,11 +260,10 @@ var params={
 'skin':'mcclean',
 'width':180,
 'height':60
-};Netyco.insert(params);
+};
+Netyco.insert(params);
 </script>
-<!-- FIN: Fin del codigo de tu reproductor de radio -->
-
-
+<!--  -->
 
 
 </html>

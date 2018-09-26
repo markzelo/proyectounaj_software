@@ -19,8 +19,8 @@ Route::get('/instrucciones', function () {
     return view('instructions');
 });
 
-Route::get('/acerca-de', function () {
-    return view('credits');
+Route::get('/about', function () {
+    return view('/credits');
 
 });
 //---------------------------------------------------------------

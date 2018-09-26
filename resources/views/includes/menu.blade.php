@@ -102,7 +102,7 @@
 												@else
 													<li @if(request()->is('/')) class="active" @endif><a href="/">Bienvenido</a></li>
 													<li @if(request()->is('instrucciones')) class="active" @endif><a href="/instrucciones">Instrucciones</a> </li>
-													<li @if(request()->is('acerca-de')) class="active" @endif><a href="/acerca-de">Créditos</a></li>
+													<li @if(request()->is('/about')) class="active" @endif><a href="/about">Créditos</a></li>
 												@endif
 								  
 				</ul>

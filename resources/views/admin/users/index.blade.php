@@ -66,7 +66,8 @@
                                                         <span class="glyphicon glyphicon-pencil"></span>
                                                     </a>
                                                     <a href="/usuario/{{ $user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
-                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                        <span class="glyphicon glyphicon-pencil"></span>
+
                                                     </a>
                                                 </td>
                                             </tr>
