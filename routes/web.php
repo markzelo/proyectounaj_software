@@ -59,7 +59,9 @@ Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
 
 //ver productos
 Route::get('/productos', 'ProductController@index');//listas
-Route::get('/productos/{id}/images', 'ImageController@index');//listas de imagenes por producto
+// Route::get('/productos', 'TestController@index');//listas
+
+
 
 Route::get('/admin/products', 'ProductController@index');//listado
 //-----------------------------------------------------------------------------------
@@ -68,6 +70,12 @@ Route::get('/admin/products/create', 'ProductController@create');//registrar
 Route::post('/admin/products', 'ProductController@store');//guardar
 Route::get('/admin/products/{id}/edit', 'ProductController@edit');//edicion
 Route::post('/admin/products/{id}/edit', 'ProductController@update');//actualizar
+Route::delete('/admin/products/{id}', 'ProductController@destroy');//actualizar
+
+
+Route::get('/admin/products/{id}/images', 'ImageController@index');//listas de imagenes por producto
+Route::post('/admin/products/{id}/images', 'ImageController@store');//guardar
+Route::delete('/admin/products/{id}/images', 'ImageController@destroy');//actualizar
 
 
 

@@ -13,12 +13,13 @@
       <div class="panel-heading">
         <h3 class="panel-title"> imagenes del servicio "{{ $product->name }}" </h3>
       </div>
-      {{ csrf_field() }}
-
-      <form method="post" action="">
+      
+      <form method="post" action="" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        {{-- required se exige subir un archivo vaklidacion --}}
         <input type="file" name="photo" required>
         <button type="submit" class="btn btn-primary btn-roun">subir nueva imagen</button>
-         <a href="{{ url('/products/create') }}" class="btn btn-primary btn-round">volver al listado</a>
+         <a href="{{ url('/admin/products') }}" class="btn btn-default btn-round">volver al listado</a>
 
       </form>
       <hr>
@@ -26,21 +27,15 @@
       @foreach ($images as $image)
       <div class="col-md-4">
         <div class="panel-body">
-          <img src="{{ $image->image }}">
-          
+          <img src="{{ $image->url }}" width="250">
+           <button type="submit" class="btn btn-danger btn-roun">eliminar imagen</button>
         </div>
-        
       </div>
       @endforeach
-       
      </div>
-
     </div>
-
   </div>
-
   {{--  @endif --}}
-
 
 </div>
 </div>

@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function index(){
     $products=Product::paginate(5);
     return view('admin.products.index')->with(compact('products'));
-     }
+    }
 
     public function create(){
     	return view('admin.products.create');
@@ -52,10 +52,23 @@ class ProductController extends Controller
         return redirect('/admin/products');
     }
 
+     public function destroy($id){
+        
+
+        $product = Product::find($id);
+       
+        $product->delete();
+
+        //redirige a vista anterior
+
+        return back();
+    }
+
+
 
     // public function index(){
     //    $products=Product::all();
-    //    return view('admin.products.index')->with(compact('products'));
+    //   return view('admin.products.index')->with(compact('products'));
     //  }
 
 

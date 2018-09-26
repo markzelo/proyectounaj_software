@@ -40,29 +40,28 @@
               <td>{{ $product->category ? $product->category->name:"general" }}</td>
               <td class="text-right">&euro;{{ $product->price }}</td>
               <td class="td-actions text-right">
-              <button class="button" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
-                <i class="fa fa-user">
-              </button>
+              
+              {{--   toda peticpn post requiere token --}}
+              <form method='post' action="{{ url("/admin/products/".$product->id) }}" >
+               {{ csrf_field() }}
+               {{ method_field('DELETE') }}
 
-            {{--   se parte la cadena --}}
-
-               <a href="{{ url("/admin/products/".$product->id."/edit") }}" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
-                <i class="fa fa-edit">
-              </a>
-
-               <button class="button" rel="tooltip" title="eliminar producto" class="btn btn-info btn-simple btn-xs">
-                <i class="fa fa-user">
-              </button>
-
+               <a href="#" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
+                <i class="fa fa-info">
+                </a>
+                {{--   se parte la cadena --}}
+                <a href="{{ url("/admin/products/".$product->id."/edit") }}" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
+                  <i class="fa fa-edit">
+                  </a>
+                  <a href="{{ url("/admin/products/".$product->id."/images") }}" rel="tooltip" title="ver imagenes del producto" class="btn btn-info btn-simple btn-xs">
+                    <i class="fa fa-info">
+                    </a>
+                  <button type="submit" rel="tooltip" title="eliminar producto" class="btn btn-info btn-simple btn-xs">
+                    <i class="fa fa-times">
+                    </button>
+                  </form>
               </td>
-
-
-
-
             </tr>
-            
-             
-          
             @endforeach
 
           </tbody>

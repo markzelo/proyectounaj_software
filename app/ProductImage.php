@@ -10,4 +10,14 @@ class ProductImage extends Model
 	public function products(){
 		return $this->belongsTo(Product::class);
 	}
+
+//campo calculado para saber si la imagen es una url o esta en local
+	public function getUrlAttribute(){
+		if(substr($this->image, 0, 4) === "http"){
+			return $this->image;
+
+         }
+         return "/images/products/" .$this->image;
+
+	}
 }
