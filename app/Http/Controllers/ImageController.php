@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\ProductImage;
+use File;
 
 
 class ImageController extends Controller
@@ -23,19 +24,34 @@ class ImageController extends Controller
         //nombre del archivo original del usuario
         //uniqued secuencia denumeros en bae a hora del sistema
     	$fileName=uniqid() .$file->getClientOriginalName();
-    	$file->move($path, $fileName);
-    	//introdurcie  la table
-        $productImage = new ProductImage();
-        $productImage->image= $fileName;
-        $productImage->product_id=$id;
-        $productImage->save();
+    	$moved= $file->move($path, $fileName);
+    	//se regsitre cunado la imagen se gurad correctamente como archivo
+        if($moved){
+            $productImage = new ProductImage();
+            $productImage->image= $fileName;
+            $productImage->product_id=$id;
+            $productImage->save();
 
+        }
         return back();
 
     }
-    // public function destroy($id){
-    //     $productImage= ProductImage::find($id);
-      
-    // }
 
+    public function destroy(Request $request ,$id){
+
+        $productImage =productImage::find($request->input("image_id"));
+        //si la imagen es una url completa ya essta eliminada
+        if(substr($productImage->image, 0, 4) === "http"){
+            $deleted=true;
+
+        }else{
+            $fullPath= public_path() ."/images/products" .$productImage->images;
+            $deleted=File::delete($fullPath);
+        }
+        if($deleted){
+            $productImage->delete();
+        }
+        return back();
+
+    }
 }

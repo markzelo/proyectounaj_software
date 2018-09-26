@@ -28,7 +28,12 @@
       <div class="col-md-4">
         <div class="panel-body">
           <img src="{{ $image->url }}" width="250">
+          <form method="post" action="">
+            {{ csrf_field() }}
+            {{ method_field("DELETE") }}
+            <input type="hidden" name="image_id" value="{{ $image->id }}">
            <button type="submit" class="btn btn-danger btn-roun">eliminar imagen</button>
+          </form>
         </div>
       </div>
       @endforeach

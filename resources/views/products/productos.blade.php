@@ -30,14 +30,12 @@
             @foreach ($products as $product)
             <div class="col-md-4">
               <div class="team-player">
-              <img src="{{ $product->images()->image()->first() }}" alt="Thumbnail Image" class="img-raised img-circle">
-              <h4 class="title">
-              <a href="{{ url('/products/'.$product->id) }}">{{ $product->id }}</a>
-              <br>
-              <small class="text-muted">{{ $product->name }}</small>
+              <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised img-circle">
+              
+              <h4 class="title">{{ $product->name }}<br />
+                    <small class="text-muted">{{ $product->category->name }}</small>
               </h4>
               <p class="description">{{ $product->description }}</p>
-              
               </div>
 
             </div>
