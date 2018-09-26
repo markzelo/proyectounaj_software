@@ -23,6 +23,7 @@ class Product extends Model
         $featuredImage= $this->image()->where("featured", true)->first();
         if(!$featuredImage)
             $featuredImage= $this->images()->first();
+        
         if($featuredImage){
             return $featuredImage->url;
         }
