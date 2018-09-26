@@ -12,7 +12,7 @@
 
     </button>
 
-    <a class="navbar-brand" href="index.html">Incidencias</a>
+    <a class="navbar-brand" href="/home">Incidencias</a>
 
 </div>
 <!-- 

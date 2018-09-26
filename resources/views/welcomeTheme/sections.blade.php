@@ -21,6 +21,10 @@
     </div>
     <div class="col-sm-8">
       <h2>Integrantes</h2> 
+      <p><strong>Full-stack developer:</strong> Fernando Luis Vargas</p>
+      <p><strong>Full-stack developer:</strong> Marcelo Herrera</p>
+      <p><strong>Full-stack developer:</strong> Carlos Quiroz</p>
+      <p><strong>Full-stack developer:</strong> Gustavo Campitelli</p>
       <p><strong>Full-stack developer:</strong> Gimenez Agustin</p>
     </div>
   </div>

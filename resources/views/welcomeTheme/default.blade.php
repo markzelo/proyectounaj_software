@@ -13,6 +13,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('welcome/normalize.css') }}">
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">

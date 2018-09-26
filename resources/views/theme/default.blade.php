@@ -35,6 +35,7 @@
     <!-- Custom CSS -->
 
     <link href="{!! asset('theme/dist/css/sb-admin-2.css') !!}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('welcome/normalize.css') }}">
 
 
 
