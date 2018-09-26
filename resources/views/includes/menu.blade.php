@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 <div class="panel panel-primary">
@@ -32,8 +32,6 @@
 										                    </ul>
 										                  </li>
 
-<<<<<<< HEAD
-=======
  --}}
                                                         <li class="treeview">
 											              <a href="#">
@@ -46,18 +44,14 @@
 											                <i class="fa fa-fw fa-database"></i> <span>eventos</span> <i class="fa fa-angle-left pull-right"></i>
 											              </a>
 											            </li>
->>>>>>> rama_markzelo
 
  --}}
 
 
 														@endif 
 														 <li @if(request()->is('reportar')) class="active" @endif>
-<<<<<<< HEAD
 															<a href="/productos">Productos</a>
-=======
 															<a href="/productos">Catlogo de servicios exclusivos</a>
->>>>>>> rama_markzelo
 														</li> 
 
 
@@ -101,9 +95,6 @@
 
 
 
-
-
-=======
 <nav >
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -115,4 +106,3 @@
 			  </li>
 			</div>
 </nav>
->>>>>>> rama_agustin
