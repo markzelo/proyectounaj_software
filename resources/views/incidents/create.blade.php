@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 
 
 @section('content')
 
-
-                            <div class="panel panel-primary">
+<div class="pann">
+    <div class="panel panel-primary">
                                 <div class="panel-heading">Consola</div>
 
                                     <div class="panel-body">
@@ -17,7 +17,7 @@
                                                         <li>{{ $error }}</li>
                                                     @endforeach
                                                 </ul>
-                                                
+
                                             </div>
                                         @endif
 
@@ -51,22 +51,15 @@
                                             </div>
                                             <div class="form-group">
                                                 <button class="btn btn-primary">Registrar incidente</button>
-                                                
+
                                             </div>
 
                                         </form>
 
-                               
+
                                     </div>
+                                </div>
                                 </div>
 
 
-        
-@endsection     
-        
-          
-
-                 
-   
- 
-
+@endsection

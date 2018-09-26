@@ -1,7 +1,7 @@
 @extends('theme.default')
 
 @section('content')
-
+<div class="pann">
             <div class="panel panel-primary">
                 <div class="panel-heading">Dashboard</div>
 
@@ -139,5 +139,5 @@
 
                 </div>
             </div>
-       
+            </div>
 @endsection

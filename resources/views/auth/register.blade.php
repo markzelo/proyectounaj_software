@@ -1,12 +1,8 @@
 @extends('theme.default')
 
 @section('content')
-<<<<<<< HEAD
-
-=======
 <div class="pann">
         <div class="col-lg-12">
->>>>>>> rama_agustin
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
@@ -73,10 +69,6 @@
                     </form>
                 </div>
             </div>
-<<<<<<< HEAD
-      
-=======
         </div>
 </div>
->>>>>>> rama_agustin
 @endsection
