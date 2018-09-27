@@ -8,7 +8,7 @@
         <div class="panel-heading">Reportar</div>
         <div class="panel-body">
 
-            <!–– seccion para visualizar los errores ––>
+           <!--  seccion para visualizar los errores -->
             @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
