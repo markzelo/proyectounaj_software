@@ -19,8 +19,7 @@
           <tr>
             <th class="text-center">#</th>
             <th class="col-md-2">Name</th>
-            <th class="col-md-5">descripcion</th>
-             
+            <th class="col-md-5">descripcion</th>    
               <th class="text-center">category</th>
               <th class="text-right">precio</th>
               <th class="text-right">opciones</th>
@@ -31,9 +30,8 @@
             <div class="col-md-4">
               <div class="team-player">
               <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised img-circle">
-              
               <h4 class="title">{{ $product->name }}<br />
-                    <small class="text-muted">{{ $product->category->name }}</small>
+                   <small class="text-muted">{{ $product->category->name }}</small>
               </h4>
               <p class="description">{{ $product->description }}</p>
               </div>

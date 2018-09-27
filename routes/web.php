@@ -58,8 +58,9 @@ Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
 
 
 //ver productos
-Route::get('/productos', 'ProductController@index');//listas
-// Route::get('/productos', 'TestController@index');//listas
+// Route::get('/productos', 'SaleProductController@index');//listas
+// Route::get('/productos', 'ProductController@index');//listas
+ Route::get('/productos', 'TestController@index');//listas
 
 
 
