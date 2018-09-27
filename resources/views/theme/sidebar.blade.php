@@ -8,6 +8,7 @@
                     <a href="/home"><i class="fa fa-tachometer"></i> Dashboard</a>
                 </li>
 
+
                 @if (! auth()->user()->is_client)
 
                     <li>
@@ -30,17 +31,28 @@
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="#"><i class="fa fa-book"></i> Contenidos de libreria</a>
+                       
+                        <li class="treeview">
+                             <a href='/PdfDemo'>
+                                <i class="fa fa-book"></i> <span>VER EN PDF</span> <i class="fa fa-angle-left pull-right"></i>
+                            </a>
                         </li>
-
-                        <li>
-                            <a href="#"><i class="fa fa-random"></i> Eventos</a>
+                        <li class="treeview">
+                            <a href='/charts'>
+                            <i class="fa fa-fw fa-database"></i> <span>Graficas</span> <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                            <li class="treeview">
+                             <a href='/gcalendar'>
+                            <i class="fa fa-random"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
+                            </a>
                         </li>
 
                     </li>
 
                 @endif
+
+               <!--  lado del cliente -->
 
                 <li>
                     <a><i class="fa fa-quote-right"></i> Incidencias<i class="fa fa-chevron-down"></i></a>
@@ -55,9 +67,12 @@
                     </ul>
                 </li>
 
+
                 <li @if(request()->is('reportar')) class="active" @endif>
 					<a href="/productos"><i class="fa fa-barcode"></i> Catalogo de servicios</a>
 				</li> 
+
+                <!-- admin -->
                 
                 @if (auth()->user()->is_admin)
 
