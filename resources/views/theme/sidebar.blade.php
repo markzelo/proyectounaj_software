@@ -65,13 +65,18 @@
                         <a href="#"><i class="fa fa-cogs fa-fw"></i> Administrar <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-users fa-fw"></i>Usuarios</a>
+                                <a href="/usuarios"><i class="fa fa-users fa-fw"></i>Usuarios</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-folder fa-fw"></i>Proyectos</a>
+                                <a href="/proyectos"><i class="fa fa-folder fa-fw"></i>Proyectos</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-eye fa-fw"></i>Administración</a>
+                                <a href="/config"><i class="fa fa-eye fa-fw"></i>Administración</a>
+                            </li>
+                            <li class="treeview">
+                                <a href='/admin/products'>
+                                    <i class="fa fa-fw fa-database"></i> <span>edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
+                                </a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
