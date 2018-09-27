@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         
         //$this->call(ProductsTableSeeder::class);
-        $this->call(AddDummyEventTableSeeder::class);
+        //$this->call(AddDummyEventTableSeeder::class);
 
     }
 }

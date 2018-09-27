@@ -60,6 +60,27 @@ Route::get('/incidencia/{id}/derivar', 'IncidentController@nextLevel');
 //ver productos
 Route::get('/productos', 'ProductController@solutions');
 
+
+Route::get('/admin/products', 'ProductController@index');//listado
+//-----------------------------------------------------------------------------------
+
+Route::get('/admin/products/create', 'ProductController@create');//registrar
+Route::post('/admin/products', 'ProductController@store');//guardar
+Route::get('/admin/products/{id}/edit', 'ProductController@edit');//edicion
+Route::post('/admin/products/{id}/edit', 'ProductController@update');//actualizar
+Route::delete('/admin/products/{id}', 'ProductController@destroy');//actualizar
+
+
+Route::get('/admin/products/{id}/images', 'ImageController@index');//listas de imagenes por producto
+Route::post('/admin/products/{id}/images', 'ImageController@store');//guardar
+Route::delete('/admin/products/{id}/images', 'ImageController@destroy');//actualizar
+
+
+
+
+
+
+
 //mensajeria chat store registra nuevos msjs
 Route::post('/mensajes', 'MessageController@store');
 
@@ -67,6 +88,21 @@ Route::post('/mensajes', 'MessageController@store');
 Route::get('/reportes', 'PdfController@index');
 Route::get('/crear_reporte_porusuario/{tipo}', 'PdfController@crear_reporte_porusuario');
 
+Route::get('/PdfDemo', ['as'=>'PdfDemo','uses'=>'PdfDemoController@index']);
+Route::get('/sample-pdf', ['as'=>'SamplePDF','uses'=>'PdfDemoController@samplePDF']);
+Route::get('/save-pdf', ['as'=>'SavePDF','uses'=>'PdfDemoController@savePDF']);
+Route::get('/download-pdf', ['as'=>'DownloadPDF','uses'=>'PdfDemoController@downloadPDF']);
+Route::get('/html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'PdfDemoController@htmlToPDF']);
+
+
+//graficas
+Route::get('/charts', 'ChartController@index')->name('chart.index');
+
+
+//eventos--------------------------------------------------------------
+//Eventos Calendario
+Route::get('/gcalendar', 'EventController@index');
+Route::post('/events', 'EventController@addEvent')->name('events.add');
 
 
 
