@@ -10,13 +10,26 @@ class Product extends Model
 
     {
     	//una producto pertenece a una categoria
-    	return $this->belongsTo(Product::class);
+    	return $this->belongsTo(Category::class);
     }
     
      public function images()
 
     {
     	
-    	return $this->hasMany(ProductImages::class);
+    	return $this->hasMany(ProductImage::class);
+    }
+    //accesor para una imagen destacada o simple
+
+    public function getFeaturedImageUrlAttribute(){
+        $featuredImage= $this->image()->where("featured", true)->first();
+        if(!$featuredImage)
+            $featuredImage= $this->images()->first();
+        
+        if($featuredImage){
+            return $featuredImage->url;
+        }
+        return "/images/products/default.jpg";
+
     }
 }
