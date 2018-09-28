@@ -10,7 +10,8 @@ use App\Product;
 class TestController extends Controller
 {
     public function index(){
-       $products=Product::all();
-       return view('products.productos')->with(compact('products'));
-     }
+       	$products=Product::paginate(5);
+    return view('product.productos.index')->with(compact('products'));
+    }
+    
 }

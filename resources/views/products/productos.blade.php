@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 @section('content')
 
@@ -14,35 +14,29 @@
         <h3 class="panel-title">productos comerciales de mantenimiento </h3>
       </div>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="text-center">#</th>
-            <th class="col-md-2">Name</th>
-            <th class="col-md-5">descripcion</th>    
-              <th class="text-center">category</th>
-              <th class="text-right">precio</th>
-              <th class="text-right">opciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($products as $product)
-            <div class="col-md-4">
-              <div class="team-player">
+      <div class="team">
+        <div class="row">
+          @foreach ($products as $product)
+          <div class="col-md-4">
+            <div class="team-player">
               <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised img-circle">
-              <h4 class="title">{{ $product->name }}<br />
-                   <small class="text-muted">{{ $product->category->name }}</small>
+              <h4 class="title">
+                <a href="{{ url("/products/.$product->id") }}">{{ $product->name }}</a>
+                <br>
+                <small class="text-muted">{{ $product->category->name }}</small>
               </h4>
               <p class="description">{{ $product->description }}</p>
-              </div>
-
             </div>
-            @endforeach
 
-          </tbody>
-        </table>
-       {{--  {{ $products->links() }} --}}
-        
+          </div>
+          @endforeach
+        </div>
+
+      </div>
+         <div class="row">
+          {{--  {{ $products->links() }} --}}
+           
+         </div>
 
       </div>
 
