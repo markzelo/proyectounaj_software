@@ -2,6 +2,15 @@
 
     <div class="sidebar-nav navbar-collapse">
 
+
+         <!-- Logo -->
+             {{--  <li>
+                  <div class="logo-wrapper waves-light">
+                      <a href=""><img src="" class="img-fluid flex-center"></a>
+                  </div>
+              </li> --}}
+              <!--/. Logo -->
+
         <ul class="nav" id="side-menu">
             @if(auth()->check())
                 <li @if(request()->is('home')) class="active" @endif>
@@ -29,6 +38,24 @@
                                     <a href="/verusuarios"><i class="fa fa-users fa-fw"></i> Consultar usuarios</a>
                                 </li>
                             </ul>
+                            
+                            <li class="treeview">
+                                  <a href="#">
+                                    <i class="fa fa-fw fa-database"></i> <span>Biblioteca de contenidos</span> <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                            </li>
+
+                            </li>
+                                <li class="treeview">
+                                  <a href='/gcalendar'>
+                                    <i class="fa fa-fw fa-database"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="treeview">
+                              <a href="#">
+                                <i class="fa fa-fw fa-database"></i> <span>Analisis y Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+                            </a>
                         </li>
 
                        
@@ -47,6 +74,12 @@
                             <i class="fa fa-random"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                         </li>
+                        <li class="treeview">
+                          <a href='/PdfDemo'>
+                            <i class="fa fa-fw fa-database"></i> <span>control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
+                          </a>
+                        </li>
+
 
                     </li>
 
@@ -61,9 +94,9 @@
                             <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
                         </li>
 
-                        <li @if(request()->is('reportar')) class="active" @endif>
+                       <!--  <li @if(request()->is('reportar')) class="active" @endif>
                             <a href="/reportar"><i class="fa fa-search"></i> Contenidos</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
 
