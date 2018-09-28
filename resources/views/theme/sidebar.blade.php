@@ -102,7 +102,7 @@
 
 
                 <li @if(request()->is('reportar')) class="active" @endif>
-					<a href="/productos"><i class="fa fa-barcode"></i> Catalogo de servicios</a>
+					<a href="/lproductos"><i class="fa fa-barcode"></i> Catalogo de servicios</a>
 				</li> 
 
                 <!-- admin -->
