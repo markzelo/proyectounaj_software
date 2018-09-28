@@ -8,6 +8,7 @@
                 <div class="panel-body">
 
                     @if(auth()->user()->is_support)
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Hola {{Auth::user()->name}},</h3>
 
                     <div class="panel panel-success">
                         <div class="panel-heading">
@@ -132,10 +133,6 @@
                             </table>
                         </div>
                     </div>
-
-
-
-
 
                 </div>
             </div>
