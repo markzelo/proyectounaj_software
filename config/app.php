@@ -166,6 +166,9 @@ return [
         /*
          * Package Service Providers...
          */
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        Elibyy\TCPDF\ServiceProvider::class,
 
         //
 
@@ -224,6 +227,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        
+        'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
 
     ],
 
