@@ -38,7 +38,7 @@
               <td>{{ $product->description }}</td>
        {{--        opreacion  si existe una categoria ono es lo que se muestra para el crud --}}
               <td>{{ $product->category ? $product->category->name:"general" }}</td>
-              <td class="text-right">&euro;{{ $product->price }}</td>
+              <td class="text-right">&dollar;{{ $product->price }}</td>
               <td class="td-actions text-right">
               
               {{--   toda peticpn post requiere token --}}
