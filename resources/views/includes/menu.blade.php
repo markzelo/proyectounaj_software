@@ -37,7 +37,7 @@
 
 			<li @if(request()->is('reportar')) class="active" @endif>
 				<a href="/productos">Productos</a>
-				<a href="/productos">Catlogo de servicios exclusivos</a>
+				<a href="/productos">Catalogo de servicios exclusivos</a>
 			</li>
 			<li @if(request()->is('reportar')) class="active" @endif>
 				<a href="/reportar">Reportar incidencia</a>
