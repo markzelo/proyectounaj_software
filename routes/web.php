@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/instrucciones', function () {
-    return view('instructions');
-});
+// Route::get('/instrucciones', function () {
+//     return view('instructions');
+// });
 
 Route::get('/acerca-de', function () {
-    return view('credits');
+    return view('guest/credits');
 });
 
 //---------------------------------------------------------------
@@ -154,4 +154,8 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
 
 	Route::get('/config', 'ConfigController@index');
     
+});
+
+Route::group(['middleware' => 'guest',"namespace"=>"Guest"], function () {
+    Route::get('/instrucciones', 'InstructionController@index');
 });

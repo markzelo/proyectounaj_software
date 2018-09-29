@@ -7,7 +7,7 @@
 >>>>>>> 391473492d0fc978aef3cd1e80b7c71f3582209a
 <div class="pann">
     <div class="col-lg-12">
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
             <div class="panel-heading">Register</div>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
@@ -45,11 +45,11 @@
                         <label for="fhone" class="col-md-4 control-label">Phone</label>
 
                         <div class="col-md-6">
-                            <input id="fhone" type="text" class="form-control" name="fhone" value="{{ old('fhone') }}" required autofocus>
+                            <input id="fhone" type="text" class="form-control" name="phone" value="{{ old('fhone') }}" required autofocus>
 
-                            @if ($errors->has('fhone'))
+                            @if ($errors->has('phone'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('fhone') }}</strong>
+                                    <strong>{{ $errors->first('phone') }}</strong>
                                 </span>
                             @endif
                         </div>

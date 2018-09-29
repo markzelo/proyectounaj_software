@@ -9,7 +9,7 @@ class InstructionController extends Controller
 {
     public function index()
     {
-        return view('instruction');
+        return view('guest/instruction');
     }
 
 }

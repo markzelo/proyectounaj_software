@@ -3,8 +3,9 @@
 
 
 @section('content')
+<div class="pann"></div>
 <div class="panel panel-primary">
-    <div class="panel-heading">arribo - scit unaj</div>
+    {{-- <div class="panel-heading">arribo - scit unaj</div> --}}
     <div class="panel panel-primary">
  
        <div class="panel-heading">Charts In Laravel 5 Using Charts Package</div>

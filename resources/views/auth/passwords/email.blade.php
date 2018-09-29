@@ -1,9 +1,10 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 <!-- Main Content -->
 @section('content')
 
-<div class="panel panel-default">
+<div class="pann"></div>
+<div class="panel panel-primary">
     <div class="panel-heading">Reset Password</div>
     <div class="panel-body">
         @if (session('status'))

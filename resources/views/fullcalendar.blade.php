@@ -3,8 +3,9 @@
 
 
 @section('content')
+<div class="pann"></div>
 <div class="panel panel-primary">
-    <div class="panel-heading">arribo - scit unaj</div>
+    <div class="panel-heading">Eventos</div>
     <div class="panel-body text-center">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

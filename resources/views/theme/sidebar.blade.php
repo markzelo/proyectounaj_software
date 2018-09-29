@@ -48,7 +48,7 @@
                             </li>
                                 <li class="treeview">
                                   <a href='/gcalendar'>
-                                    <i class="fa fa-fw fa-database"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
+                                    <i class="fa fa-fw fa-database"></i> <span>Registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                             </li>
 
@@ -61,7 +61,7 @@
                        
                         <li class="treeview">
                              <a href='/PdfDemo'>
-                                <i class="fa fa-book"></i> <span>VER EN PDF</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-book"></i> <span>Exportar a PDF</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                         </li>
                         <li class="treeview">
@@ -71,12 +71,12 @@
                         </li>
                             <li class="treeview">
                              <a href='/gcalendar'>
-                            <i class="fa fa-random"></i> <span>registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
+                            <i class="fa fa-random"></i> <span>Registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                         </li>
                         <li class="treeview">
                           <a href='/PdfDemo'>
-                            <i class="fa fa-fw fa-database"></i> <span>control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
+                            <i class="fa fa-fw fa-database"></i> <span>Control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
                           </a>
                         </li>
 
@@ -123,7 +123,7 @@
                             </li>
                             <li class="treeview">
                                 <a href='/admin/products'>
-                                    <i class="fa fa-fw fa-database"></i> <span>edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
+                                    <i class="fa fa-fw fa-database"></i> <span>Edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                             </li>
                         </ul>

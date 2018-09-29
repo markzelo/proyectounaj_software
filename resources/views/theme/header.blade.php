@@ -29,7 +29,7 @@
     <!-- /.dropdown -->
     @if (Auth::guest())
         <li><a href="{{ url('/login') }}">Login</a></li>
-        <li><a href="{{ url('/register') }}">Register</a></li>
+        {{-- <li><a href="{{ url('/register') }}">Register</a></li> --}}
     @else
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -56,7 +56,7 @@
     <!-- Left Side Of Navbar -->
      <ul class="nav navbar-nav">
          <!-- si el usuario se autentifica admin o tecnico asisgnacion de proyecto con selector-->
-        @if(auth()->check());
+        @if(auth()->check())
        
 
             <form class="navbar-form">
