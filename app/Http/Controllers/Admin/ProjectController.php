@@ -15,7 +15,7 @@ class ProjectController extends Controller
         $projects = Project::withTrashed()->get();
 
         //consulta con orm
-        $projects = Project::all();
+        //$projects = Project::all();
 
     	return view('admin.projects.index')->with(compact('projects'));
     }

@@ -83,7 +83,7 @@ class UserController extends Controller
 
     	$user->save();
 
-    	return back()->with('notification', 'Usuario modificado bien.');
+    	return back()->with('notification', 'Usuario modificado correctamente.');
     }
 
     public function delete($id)

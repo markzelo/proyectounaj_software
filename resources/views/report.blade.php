@@ -36,11 +36,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="title">Titulo</label>
+                    <label for="title">Título</label>
                     <input type="text" name="title" class="form-control" value="{{old('title')}}">
                 </div>
                 <div class="form-group">
-                    <label for="description">Descripcion</label>
+                    <label for="description">Descripción</label>
                     <textarea name="description" class="form-control">{{old('description')}}</textarea>
                 </div>
                 <div class="form-group">

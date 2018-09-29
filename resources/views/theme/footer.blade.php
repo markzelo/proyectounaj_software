@@ -1,5 +1,5 @@
 <!-- mi radio -->
-<script type="text/javascript" src="http://www.netyco.com:82/radio-x-internet/player/player.js"></script>
+<script type="text/javascript" src="{{-- http://www.netyco.com:82/radio-x-internet/player/player.js --}}"></script>
 <div id="radioload">Tu radio en Internet <a alt=" radio por internet" href="">Scit corporacion</a>
 </div>
 <script type="text/javascript">

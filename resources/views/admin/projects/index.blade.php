@@ -68,9 +68,9 @@
                     <td>{{ $project->name }}</td>
                     <td>{{ $project->description }}</td>
                     <td>{{ $project->start ?: 'No se ingreso fecha' }}</td>
-                    <td>                        
-                       
-                         @if ($project->trashed())
+                    <td>
+
+                        @if ($project->trashed())
                         <a href="/proyecto/{{ $project->id }}/restaurar" class="btn btn-sm btn-success" title="Restaurar">
                             <span class="glyphicon glyphicon-repeat"></span>
                         </a>

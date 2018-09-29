@@ -23,7 +23,7 @@
                                 <th>Severidad</th>
                                 <th>Estado</th>
                                 <th>Fecha de creación</th>
-                                <th>Titulo</th>
+                                <th>Título</th>
                             </tr>
                         </thead>
 
@@ -50,7 +50,7 @@
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Incidencias sin asignacion</h3>
+                    <h3 class="panel-title">Incidencias sin asignación</h3>
                 </div>
                 <div class="panel-body">
                     <table class="table table-bordered">
@@ -62,7 +62,7 @@
                                 <th>Estado</th>
                                 <th>Fecha de creación</th>
                                 <th>Título</th>
-                                <th>Opcion</th>
+                                <th>Opción</th>
                             </tr>
                         </thead>
                         <tbody id="dashboard_pending_incidents">
