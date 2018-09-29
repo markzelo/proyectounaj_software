@@ -77,6 +77,11 @@ class ProductController extends Controller
         return back();
     }
 
+    public function listas(){
+    $products=Product::paginate(5);
+    return view('listasproductos')->with(compact('products'));
+    }
+
 
 
 }
