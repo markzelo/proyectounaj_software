@@ -22,11 +22,14 @@ class Product extends Model
     //accesor para una imagen destacada o simple
 
     public function getFeaturedImageUrlAttribute(){
-        $featuredImage= $this->image()->where("featured", true)->first();
+        //don el campo fuatured sea true exista o a la primera que se encuentra asociada
+        $featuredImage= $this->images()->where("featured", true)->first();
         if(!$featuredImage)
             $featuredImage= $this->images()->first();
         
-        if($featuredImage){
+
+        //url campo calculado de product image
+         if($featuredImage){
             return $featuredImage->url;
         }
         return "/images/products/default.jpg";
