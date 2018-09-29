@@ -9,7 +9,7 @@ var params={
 
 'lang':'es',
 'codec':'mp3',
-'volume':100,
+'volume':50,
 'autoplay':false,
 'buffering':10,
 'title':'mi%20radio',
