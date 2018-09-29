@@ -75,7 +75,7 @@
                             </a>
                         </li>
                         <li class="treeview">
-                          <a href='/PdfDemo'>
+                          <a href='/listas'>
                             <i class="fa fa-fw fa-database"></i> <span>control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
                           </a>
                         </li>
@@ -94,15 +94,13 @@
                             <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
                         </li>
 
-                       <!--  <li @if(request()->is('reportar')) class="active" @endif>
-                            <a href="/reportar"><i class="fa fa-search"></i> Contenidos</a>
-                        </li> -->
+                       
                     </ul>
                 </li>
 
 
-                <li @if(request()->is('reportar')) class="active" @endif>
-					<a href="/lproductos"><i class="fa fa-barcode"></i> Catalogo de servicios</a>
+                <li >
+					<a href='/listas'><i class="fa fa-barcode"></i> Catalogo de servicios</a>
 				</li> 
 
                 <!-- admin -->
