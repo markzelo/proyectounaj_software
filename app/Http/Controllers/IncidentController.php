@@ -29,10 +29,7 @@ class IncidentController extends Controller
         return view('incidents.show')->with(compact('incident','messages'));
     }
 
-   
-
-
-     public function create() 
+    public function create() 
     {
         $categories = Category::where('project_id', 1)->get();
         return view('incidents.create')->with(compact('categories'));
@@ -59,10 +56,7 @@ class IncidentController extends Controller
 
         return back();
     }
-
-
-   
-
+  
     public function edit($id)
     {
         $incident = Incident::findOrFail($id);
@@ -84,10 +78,6 @@ class IncidentController extends Controller
         $incident->save();
         return redirect("/ver/$id");        
     }
-
-
-
-
 
     
 //objetos de incidencia
@@ -136,6 +126,7 @@ class IncidentController extends Controller
         return back();
        
     }
+    
     public function open($id)
     {
         $incident = Incident::findOrFail($id);

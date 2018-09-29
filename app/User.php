@@ -80,23 +80,20 @@ class User extends Authenticatable
     //funcion scope para listar resultados de busqueda
 
     public function scopeBusqueda($query,$select_project_id,$dato="")
-     {
-
-            if($role==0){ 
-            $resultado= $query->where('name','like','%'.$dato.'%')
-                               ->orWhere('email','like', '%'.$dato.'%');
-            }
-            else{
-               
-              $resultado= $query->where("role","=",$role)
-                                  ->Where(function($q) use ($role,$dato)  {
-                                    $q->where('name','like','%'.$dato.'%')
-                                      ->orWhere('email','like', '%'.$dato.'%');       
-                                   });
-
-             }                     
-        
-        return  $resultado;
+    {
+      if($role==0){
+        $resultado= $query->where('name','like','%'.$dato.'%')
+                      ->orWhere('email','like', '%'.$dato.'%');
+      }
+      else{
+        $resultado= $query->where("role","=",$role)
+              ->Where(function($q) use ($role,$dato)  {
+              $q->where('name','like','%'.$dato.'%')
+              ->orWhere('email','like', '%'.$dato.'%');
+        });
+      }
+      
+      return  $resultado;
      }
      
 }

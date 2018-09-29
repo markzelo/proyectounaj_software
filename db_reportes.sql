@@ -307,7 +307,7 @@ CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `fhone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` smallint(6) NOT NULL DEFAULT '2',
@@ -322,7 +322,7 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `lastname`, `fhone`, `email`, `password`, `role`, `selected_project_id`, `remember_token`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT INTO `users` (`id`, `name`, `lastname`, `phone`, `email`, `password`, `role`, `selected_project_id`, `remember_token`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'marx', 'sanchez', '2-234-2345', 'admin@gmail.com', '$2y$10$HoUnUA7m9gqsUT4dJdCkMup8YrNQF.nzsxV1qZL3NuG2Giw9laolS', 0, 1, 'M6oFJDHVjw06pwV9f8MqXYQODwOHbK1zCff9bkhhvguUYjTgsLtqAfwZMfg0', NULL, '2018-09-22 03:32:04', '2018-09-27 13:04:48'),
 (2, 'Lass', 'ilia', '2-234-2345', 'cliente@gmail.com', '$2y$10$a6F8ifUFRaXpWoF0LmHl3eQe0ZajdFHcsqMepaVxsN9nznrldtw22', 2, 1, 'VQJX7gdoE96jlOqqMC5ApUlUhWkBDMOZoy6u6UBu1t1RRECnb73GRcMcBuqq', NULL, '2018-09-22 03:32:04', '2018-09-27 11:45:47'),
 (3, 'Soporte S1', 'cortazar', '2-234-2345', 'soporte1@gmail.com', '$2y$10$cImfUph6FRs9VC1DDv08neRAt.81i7idiFSfzJaXm/8s13mFgFnFi', 1, 1, 'E7YvBALOKjfbVPUXgKVFvWWmuCYALq8uqKvceByJBsw5BITzbxEwImaCZsIY', NULL, '2018-09-22 03:32:05', '2018-09-23 14:25:13'),

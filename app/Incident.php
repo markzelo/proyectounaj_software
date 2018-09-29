@@ -28,10 +28,12 @@ class Incident extends Model
     {
         return $this->belongsTo('App\Category');
     }
+    
     public function project()
     {
         return $this->belongsTo('App\Project');
     }
+
     public function support()
     {
         //muchos reportes le pertenese aun usuario particular le pasamos el nombre de campo de la clave fk eligida

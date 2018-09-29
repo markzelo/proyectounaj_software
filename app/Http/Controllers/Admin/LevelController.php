@@ -13,11 +13,6 @@ class LevelController extends Controller
     {
         return Level::where('project_id', $id)->get();
     }
-    
-
-
-
-
 
     public function store(Request $request)
     {
