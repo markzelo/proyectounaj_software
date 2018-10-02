@@ -23,7 +23,7 @@
         @foreach($products as $product)
         <div class="col-md-4">
           <div class="team-player">
-            <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised img-circle" width="250"> 
+            <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="rounded" width="250"> 
             <h4 class="title">{{ $product->name }}<br/>
 
             </h4>

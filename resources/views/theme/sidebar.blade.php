@@ -88,10 +88,7 @@
 					<a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
 				</li> 
 
-                 <li @if(request()->is('listas')) class="active" @endif>
-                    <a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
-
-                </li> 
+              
 
 
                 <!-- admin -->
