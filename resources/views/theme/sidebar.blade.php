@@ -45,12 +45,7 @@
                                 </a>
                             </li>
 
-                            {{-- </li>
-                                <li class="treeview">
-                                  <a href='/gcalendar'>
-                                    <i class="fa fa-fw fa-database"></i> <span>Registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                            </li> --}}
+                            
 
                             <li class="treeview">
                               <a href="#">
@@ -74,12 +69,7 @@
                             <i class="fa fa-calendar"></i> <span> Registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                         </li>
-                        <li class="treeview">
-                          <a href='/listas'>
-                            <i class="fa fa-fw fa-database"></i> <span>control de servidor</span> <i class="fa fa-angle-left pull-right"></i>
-                          </a>
-                        </li>
-
+                       
 
                     </li>
 
@@ -94,10 +84,10 @@
                             <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
                         </li>
                     </ul>
-                </li>
-                <li @if(request()->is('reportar')) class="active" @endif>
-					<a href="/lproductos"><i class="fa fa-barcode"></i> Catálogo de servicios</a>
-				</li> 
+                 <li @if(request()->is('listas')) class="active" @endif>
+                    <a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
+
+                </li> 
 
                 <!-- admin -->
                 
