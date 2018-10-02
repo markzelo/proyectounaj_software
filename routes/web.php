@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/instrucciones', function () {
-    return view('instructions');
-});
+// Route::get('/instrucciones', function () {
+//     return view('instructions');
+// });
 
 Route::get('/acerca-de', function () {
-    return view('credits');
+    return view('guest/credits');
 });
 
 //---------------------------------------------------------------
@@ -120,7 +120,7 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
     Route::post('/usuario/{id}', 'UserController@update');
 	
 	//registrar-----------------------------------------------
-	Route::post('/usuario/{id}/eliminar', 'UserController@delete');
+	Route::get('/usuario/{id}/eliminar', 'UserController@delete');
 
 
 	Route::get('/proyectos', 'ProjectController@index');
@@ -138,20 +138,24 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
    //categorias--------------------------------------------------------
     Route::post('/categorias', 'CategoryController@store');
      Route::post('/categoria/editar', 'CategoryController@update');
-     Route::get('/categoria/{id}/eliminar', 'CategoryController@delete');
+     Route::post('/categoria/{id}/eliminar', 'CategoryController@delete');
 
     //niveles-------------------------------------------------------------
     Route::post('/niveles', 'LevelController@store');
     Route::post('/nivel/editar', 'LevelController@update');
-    Route::get('/nivel/{id}/eliminar', 'LevelController@delete');
+    Route::post('/nivel/{id}/eliminar', 'LevelController@delete');
 
     // Project-User-------------------------------------------
     Route::post('/proyecto-usuario', 'ProjectUserController@store');
-    Route::get('/proyecto-usuario/{id}/eliminar', 'ProjectUserController@delete');
+    Route::post('/proyecto-usuario/{id}/eliminar', 'ProjectUserController@delete');
 
 
 
 
 	Route::get('/config', 'ConfigController@index');
     
+});
+
+Route::group(['middleware' => 'guest',"namespace"=>"Guest"], function () {
+    Route::get('/instrucciones', 'InstructionController@index');
 });

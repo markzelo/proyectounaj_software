@@ -15,7 +15,7 @@ class ProjectController extends Controller
         $projects = Project::withTrashed()->get();
 
         //consulta con orm
-        $projects = Project::all();
+        //$projects = Project::all();
 
     	return view('admin.projects.index')->with(compact('projects'));
     }
@@ -40,7 +40,6 @@ class ProjectController extends Controller
         return view('admin.projects.edit')->with(compact('project','categories','levels'));
     }
 
-
     public function update($id, Request $request)
     {
         $this->validate($request, Project::$rules, Project::$messages);
@@ -48,10 +47,9 @@ class ProjectController extends Controller
 
         return back()->with('notification', 'El proyecto se ha editado correctamente.');
 
-       
     }
 
-     public function delete($id)
+    public function delete($id)
     {
         Project::find($id)->delete();
 
@@ -65,5 +63,4 @@ class ProjectController extends Controller
         return back()->with('notification', 'El proyecto se ha habilitado correctamente.');
     }
 
-    
 }

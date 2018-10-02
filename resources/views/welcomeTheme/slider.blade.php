@@ -18,7 +18,7 @@
     <div class="item">
       <img src="{{ asset('welcome/mysql.jpg') }}" alt="mysql">
       <div class="carousel-caption">
-        <h3>My SQL</h3>
+        <h3>MySQL</h3>
       </div> 
     </div>
 

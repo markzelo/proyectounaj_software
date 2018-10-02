@@ -19,6 +19,7 @@ class CategoryController extends Controller
 
     	return back();
     }
+
     public function update(Request $request)
     {
         $this->validate($request, [
@@ -41,8 +42,4 @@ class CategoryController extends Controller
         Category::find($id)->delete();
         return back();
     }
-
-
-
-
 }

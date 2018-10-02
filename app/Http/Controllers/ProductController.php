@@ -50,6 +50,7 @@ class ProductController extends Controller
         $product = Product::find($id);
         return view('admin.products.edit')->with(compact("product"));
     }
+    
     public function update(Request $request, $id){
         
 
@@ -78,10 +79,7 @@ class ProductController extends Controller
     }
 
     public function listas(){
-    $products=Product::paginate(5);
-    return view('listasproductos')->with(compact('products'));
+        $products=Product::paginate(5);
+        return view('listasproductos')->with(compact('products'));
     }
-
-
-
 }

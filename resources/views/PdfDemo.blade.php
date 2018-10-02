@@ -11,9 +11,9 @@
 </style>
 
 
-
+<div class="pann"></div>
 <div class="panel panel-primary">
-	<div class="panel-heading">base de contenidos</div>
+	<div class="panel-heading">Base de contenidos</div>
 	<div class="panel-body text-center">
 
 		<div class="row">

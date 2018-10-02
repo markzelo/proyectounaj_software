@@ -18,8 +18,7 @@ class UserController extends Controller
         return view('admin.users.index')->with(compact('users'));
     }
 
-    
-     public function store(Request $request)
+    public function store(Request $request)
     {
     	$rules = [
     		'name' => 'required|max:255',
@@ -48,8 +47,7 @@ class UserController extends Controller
     	return back()->with('notification', 'Usuario registrado exitosamente.');
     }
 
-
-     public function edit($id)
+    public function edit($id)
     {
     	$user = User::find($id);
         $projects = Project::all();
@@ -85,24 +83,15 @@ class UserController extends Controller
 
     	$user->save();
 
-    	return back()->with('notification', 'Usuario modificado bien.');
+    	return back()->with('notification', 'Usuario modificado correctamente.');
     }
 
-
-     public function delete($id)
+    public function delete($id)
     {
         $user = User::find($id);
         $user->delete();
 
         return back()->with('notification', 'El usuario se elimino correctamente.');
     }
-
-
-
-
-
-
-
-
 
 }

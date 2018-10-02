@@ -1,6 +1,7 @@
 @extends('theme.default')
 
 @section('content')
+<div class="pann"></div>
 <div class="panel panel-primary">
     <div class="panel-heading">Editar usuario</div>
 

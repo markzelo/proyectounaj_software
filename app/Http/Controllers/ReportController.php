@@ -15,8 +15,6 @@ class ReportController extends Controller
     {
         $user = auth()->user();
         $selected_project_id = $user->selected_project_id;
-      
-
         
             //consulatar incidencis reportadas por mi 
 

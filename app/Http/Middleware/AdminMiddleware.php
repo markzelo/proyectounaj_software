@@ -18,19 +18,12 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {
         
-
-
         if(!auth()->check())
             return redirect("login");
 
-
-        
         //si no es administrador
         if (auth()->user()->role!=0)
              return redirect("home");
-
-
-
 
         return $next($request);
         //solicitudes psasan a lo que continua normal

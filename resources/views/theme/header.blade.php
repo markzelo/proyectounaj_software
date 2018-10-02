@@ -29,7 +29,7 @@
     <!-- /.dropdown -->
     @if (Auth::guest())
         <li><a href="{{ url('/login') }}">Login</a></li>
-        <li><a href="{{ url('/register') }}">Register</a></li>
+        {{-- <li><a href="{{ url('/register') }}">Register</a></li> --}}
     @else
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -54,26 +54,26 @@
 
     <!-- /.dropdown -->
     <!-- Left Side Of Navbar -->
-                     <ul class="nav navbar-nav">
-                         <!-- si el usuario se autentifica admin o tecnico asisgnacion de proyecto con selector-->
-                        @if(auth()->check());
-                       
+     <ul class="nav navbar-nav">
+         <!-- si el usuario se autentifica admin o tecnico asisgnacion de proyecto con selector-->
+        @if(auth()->check())
+       
 
-                            <form class="navbar-form">
-                                <div class="form-group">
-                                  <select id="list-of-projects" class="form-control">
-                                    <!-- mostarar proyectos dependiendo del tipo de usuario que inicia -->
-                                      @foreach(auth()->user()->list_of_projects as $project)
-                                       <!-- condicional para mostara el id del proyecto si coincide con el seleccionado por el usuario que inicio session -->
-                                      <option value="{{ $project->id }}" @if($project->id==auth()->user()->selected_project_id) selected @endif>{{ $project->name }}</option>
-                                      @endforeach
+            <form class="navbar-form">
+                <div class="form-group">
+                  <select id="list-of-projects" class="form-control">
+                    <!-- mostarar proyectos dependiendo del tipo de usuario que inicia -->
+                      @foreach(auth()->user()->list_of_projects as $project)
+                       <!-- condicional para mostara el id del proyecto si coincide con el seleccionado por el usuario que inicio session -->
+                      <option value="{{ $project->id }}" @if($project->id==auth()->user()->selected_project_id) selected @endif>{{ $project->name }}</option>
+                      @endforeach
 
-                                  </select>
-                                </div>
-                            </form>
-                      
-                        @endif()
-                    </ul>
+                  </select>
+                </div>
+            </form>
+      
+        @endif()
+    </ul>
 
 </ul>
 

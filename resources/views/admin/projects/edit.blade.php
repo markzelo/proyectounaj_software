@@ -4,145 +4,131 @@
 
 @section('content')
 
+<div class="pann"></div>
+<div class="panel panel-primary">
+  <div class="panel-heading">editar proyecto</div>
 
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">editar proyecto</div>
+      <div class="panel-body">
+        @if (session('notification'))
+              <div class="alert alert-success">
+                  {{ session('notification') }}
+              </div>
+        @endif
 
-                                    <div class="panel-body">
+        @if (count($errors) >0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                
+            </div>
+        @endif
 
-                                         @if (session('notification'))
-                                            <div class="alert alert-success">
-                                                {{ session('notification') }}
-                                            </div>
-                                        @endif
+        <form action="" method="POST">
+            {{ csrf_field() }}
 
-                                        @if (count($errors) >0)
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                                
-                                            </div>
-                                        @endif
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" class="form-control" value="{{ old('name', $project->name) }}">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <input type="text" name="description" class="form-control" value="{{ old('description', $project->description) }}">
+            </div>
+            <div class="form-group">
+                <label for="start">Fecha de inicio</label>
+                <input type="date" name="start" class="form-control" value="{{ old('start', $project->start) }}">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Guardar proyecto</button>
+            </div>
+        </form>
 
-                                          <form action="" method="POST">
-                                                {{ csrf_field() }}
+        <div class="row">
+            <div class="col-md-6">
+                 <p>Categorias</p>
+                 <form action="/categorias" method="POST" class="form-inLine">
+                     {{ csrf_field() }}
+                     <input type="hidden" name="project_id" value="{{ $project->id }}">
+                    <div class="form-group">
+                        <input type="text" name ="name" placeholder="ingresar nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Añadir</button>
+                    </div>
+                  </form>
 
-                                                <div class="form-group">
-                                                    <label for="name">Nombre</label>
-                                                    <input type="text" name="name" class="form-control" value="{{ old('name', $project->name) }}">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="description">Descripción</label>
-                                                    <input type="text" name="description" class="form-control" value="{{ old('description', $project->description) }}">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="start">Fecha de inicio</label>
-                                                    <input type="date" name="start" class="form-control" value="{{ old('start', $project->start) }}">
-                                                </div>
-                                                <div class="form-group">
-                                                    <button class="btn btn-primary">Guardar proyecto</button>
-                                                </div>
-                                            </form>
+                  <table class="table table-bordered">
+                    <thead>
 
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                     <p>Categorias</p>
-                                                     <form action="/categorias" method="POST" class="form-inLine">
-                                                         {{ csrf_field() }}
-                                                         <input type="hidden" name="project_id" value="{{ $project->id }}">
-                                                        <div class="form-group">
-                                                            <input type="text" name ="name" placeholder="ingresar nombre" class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <button class="btn btn-primary">Añadir</button>
-                                                        </div>
-                                                     </form>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Opciones</th>
+                      </tr>
 
-                                                       <table class="table table-bordered">
-                                                            <thead>
-                                                                <tr>
-                                                            
-                                                                    <th>Nombre</th>
-                                                                    <th>Opciones</th>
-                                                                    
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                    </thead>
+                    <tbody>
+                      @foreach($categories as $category)
+                      <tr>
+                        <td>{{ $category->name }}</td>
+                        <td>
+                          <button type="button"  class="btn btn-sm btn-primary" title="Editar" data-category="{{ $category->id }}">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                          <a href="/categoria/{{ $category->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                            <span class="glyphicon glyphicon-remove"></span>
+                          </a>
 
-                                                                @foreach($categories as $category)
-                                                                <tr>
-                                                                    <td>{{ $category->name }}</td>
-                                                                   
-                                                                     <td>
-                                                                       
-                                                                       <button type="button"  class="btn btn-sm btn-primary" title="Editar" data-category="{{ $category->id }}">
-                                                                            <span class="glyphicon glyphicon-pencil"></span>
-                                                                        </button>
-                                                                       
-                                                                        <a href="/categoria/{{ $category->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
-                                                                            <span class="glyphicon glyphicon-remove"></span>
-                                                                        </a>
-                                                                    
-                                                                    </td>
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                    </table>
-                                                    
-                                                </div>
-                                                <div class="col-md-6">
-                                                     <p>Niveles</p>
-                                                    <form action="/niveles" method="POST" class="form-inLine">
-                                                         {{ csrf_field() }}
-                                                        <input type="hidden" name="project_id" value="{{ $project->id }}">
-                                                        <div class="form-group">
-                                                            <input type="text" name="name" placeholder="ingresar nombre" class="form-control">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <button class="btn btn-primary">Añadir</button>
-                                                        </div>
-                                                     </form>
-                                                       
+                        </td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>  
+            </div>
 
-                                                       <table class="table table-bordered">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>#</th>
-                                                                    <th>Nivel</th>
-                                                                    <th>Opciones</th>
-                                                                    
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach($levels as $key=> $level)
-                                                                <tr>
-                                                                    <td>{{ $key+1 }}</td>
-                                                                    <td>{{ $level->name }}</td>
-                                                                  
-                                                                     <td>
-                                                                       <button type="button" class="btn btn-sm btn-primary" title="Editar" data-level="{{ $level->id }}">
-                                                                          <span class="glyphicon glyphicon-pencil"></span>
-                                                                      </button>
-                                                                        <a href="/nivel/{{ $level->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
-                                                                            <span class="glyphicon glyphicon-remove"></span>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                @endforeach
-
-                                                            </tbody>
-                                                        </table>
-                                                    
-                                                </div>
-                                                
-                                            </div>
-
-
-                                    </div>
-                                </div>
+            <div class="col-md-6">
+              <p>Niveles</p>
+              <form action="/niveles" method="POST" class="form-inLine">
+                {{ csrf_field() }}
+                <input type="hidden" name="project_id" value="{{ $project->id }}">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="ingresar nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary">Añadir</button>
+                </div>
+              </form>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nivel</th>
+                    <th>Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($levels as $key=> $level)
+                  <tr>
+                    <td>{{ $key+1 }}</td>
+                    <td>{{ $level->name }}</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-primary" title="Editar" data-level="{{ $level->id }}">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                      </button>
+                      <a href="/nivel/{{ $level->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                        <span class="glyphicon glyphicon-remove"></span>
+                      </a>
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+</div>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="modalEditCategory">
   <div class="modal-dialog" role="document">

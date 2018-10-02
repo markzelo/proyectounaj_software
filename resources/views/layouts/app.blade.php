@@ -17,9 +17,7 @@
     <!--https://bootswatch.com/4/litera/bootstrap.min.css
     https://bootswatch.com/4/solar/bootstrap.min.css
     https://bootswatch.com/4/superhero/bootstrap.css
-    //bootswatch.com/3/flatly/bootstrap.css
-
--->
+    //bootswatch.com/3/flatly/bootstrap.css-->
 
 
 
@@ -40,8 +38,6 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
         
-
-
             <div class="container">
                 <div class="navbar-header">
 
@@ -64,9 +60,8 @@
                     <!-- Left Side Of Navbar -->
                      <ul class="nav navbar-nav">
                          <!-- si el usuario se autentifica admin o tecnico asisgnacion de proyecto con selector-->
-                        @if(auth()->check());
+                        @if(auth()->check())
                        
-
                             <form class="navbar-form">
                                 <div class="form-group">
                                   <select id="list-of-projects" class="form-control">
@@ -118,49 +113,40 @@
         </nav>
 
         <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-3">  
-                    @include('includes.menu') 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        @include('includes.menu')
+                    </div>
+                    <div class="col-md-9">
+                        @yield('content')
+                    </div>
                 </div>
-                <div class="col-md-9">
-                    @yield('content')
-                </div>
-          </div>
+            </div>
         </div>
-
-    </div>
-
-
-
 
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     @include('includes.menu')
-                    
                 </div>
-                
                 <div class="col-md-9">
                     @yield('content')
-                    
                 </div> 
             </div>
-            </div>
         </div>
+    </div>
 
-        <script
+    <script
 
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
    
-    <!-- Scripts -->
-        <script src="/js/app.js"></script>
-
-    
+<!-- Scripts -->
+    <script src="/js/app.js"></script>
     @yield('scripts')
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

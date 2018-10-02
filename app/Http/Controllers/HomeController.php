@@ -68,8 +68,6 @@ class HomeController extends Controller
                 $incidents_by_me = [];
             }
 
-           
-
         return view('home')->with(compact('my_incidents', 'pending_incidents', 'incidents_by_me'));
        
     }
@@ -84,8 +82,5 @@ class HomeController extends Controller
 
         return back();
     }
-
-
-
 
 }
