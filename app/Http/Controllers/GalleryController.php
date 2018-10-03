@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 
 
-class TestController extends Controller
+class GalleryController extends Controller
 {
     public function index(){
     $products=Product::paginate(5);
