@@ -75,18 +75,31 @@
 
                <!--  lado del cliente -->
 
-                <li>
-                    <a><i class="fa fa-exclamation-circle"></i> Incidencias<i class="fa fa-chevron-down"></i></a>
-                    <ul class="nav nav-second-level">
-                        <li @if(request()->is('reportar')) class="active" @endif>
-                            <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
-                        </li>
-                    </ul>
+               <li>
+                <a><i class="fa fa-exclamation-circle"></i> Incidencias<i class="fa fa-chevron-down"></i></a>
+                <ul class="nav nav-second-level">
+                    <li @if(request()->is('reportar')) class="active" @endif>
+                        <a href="/reportar"><i class="fa fa-pencil-square-o fa-fw"></i> Reportar incidencia</a>
+                    </li>
+                </ul>
+             </li>
 
-                </li>
-                <li @if(request()->is('listas')) class="active" @endif>
-					<a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
-				</li> 
+             <li>
+                <a><i class="fa fa-barcode"></i> Sector compras<i class="fa fa-chevron-down"></i></a>
+                <ul class="nav nav-second-level">
+                    <li @if(request()->is('listas')) class="active" @endif>
+                        <a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
+                    </li> 
+                    <li @if(request()->is('listas')) class="active" @endif>
+                        <a href="/listas"><i class="fa fa-cart-arrow-down"></i> lista de pedidos</a>
+                    </li> 
+                    <li @if(request()->is('listas')) class="active" @endif>
+                        <a href="/listas"><i class="fa fa-cart-plus"></i> mi carrito de compra</a>
+                    </li> 
+                </ul>
+
+                 </li>
+
 
               
 

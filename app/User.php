@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -95,5 +96,28 @@ class User extends Authenticatable
       
       return  $resultado;
      }
+
+
+     //carritos asociados al usuario  relaciones
+     public function carts(){
+      return $this->hasMany(Cart::class);
+
+     }
      
+
+
+     //accesor para carritos
+     public function  getCartIdAttribute(){
+      $this->carts()->where('status','Active')->first();
+      if ($cart) 
+        return $cart;
+
+      //si no 
+      $cart=new Cart();
+      $cart->status='Active';
+      $cart->user_id=$this->id;
+      $cart->save();
+      return $cart;
+
+     }
 }

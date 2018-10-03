@@ -96,7 +96,10 @@
                       aria-hidden="true">&times; </button>
                        <h5 class="modal-title" id="myModalLabel">añade cantidada del producto elegido a carrito de compras</h5>
                   </div>
-
+{{-- ruta absoluta --}}
+                  <form method="post" action="{{ url('/cart') }}">
+                    {{ csrf_field() }}
+                    <input type="type" name="product_id" value="{{ $product->id }}">
 
                   <div class="modal-body">
                     <input type="number" name="quantity" value="1" class="form-control">
@@ -105,6 +108,9 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar compra</button>
                     <button type="button" class="btn btn-primary">añadir compra</button>
                   </div>
+                  </form>
+
+
                 </div>
               </div>
             </div>
