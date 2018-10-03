@@ -23,9 +23,40 @@ class ChartController extends Controller
         $pastel = Product::all();
                   // select('products.name','producto_venta.venta')
                   // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
-        return view('chart',['pastel'=>$pastel]);
+        return view('/charts/pie',['pastel'=>$pastel]);
         
     }
+
+    public function index_line()
+    {
+        
+        $pastel = Product::all();
+                  // select('products.name','producto_venta.venta')
+                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
+        return view('/charts/line',['pastel'=>$pastel]);
+        
+    }
+
+    public function index_bar()
+    {
+        
+        $pastel = Product::all();
+                  // select('products.name','producto_venta.venta')
+                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
+        return view('/charts/bar',['pastel'=>$pastel]);
+        
+    }
+
+    public function index_area()
+    {
+        
+        $pastel = Product::all();
+                  // select('products.name','producto_venta.venta')
+                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
+        return view('/charts/area',['pastel'=>$pastel]);
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *
