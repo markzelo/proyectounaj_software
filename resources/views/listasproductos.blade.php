@@ -24,7 +24,8 @@
         <div class="col-md-4">
           <div class="team-player">
             <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="rounded" width="250"> 
-            <h4 class="title">{{ $product->name }}<br/>
+            <h4 class="title">
+              <a href="{{ url("/products/". $product->id) }}">{{ $product->name }}<a/><br>
 
             </h4>
             <h4 class="title">{{ $product->price }}<br/>

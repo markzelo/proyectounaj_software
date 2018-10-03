@@ -47,18 +47,20 @@
                {{ csrf_field() }}
                {{ method_field('DELETE') }}
 
-               <a href="#" rel="tooltip" title="ver productos" class="btn btn-info btn-simple btn-xs">
-                <i class="fa fa-info">
+               <a href="#" rel="tooltip" title="ver productos" class="btn btn-sm btn-danger" >
+               <span class="glyphicon glyphicon-eye-open"></span>
                 </a>
+
+
                 {{--   se parte la cadena --}}
-                <a href="{{ url("/admin/products/".$product->id."/edit") }}" rel="tooltip" title="editar productos" class="btn btn-info btn-simple btn-xs">
-                  <i class="fa fa-edit">
-                  </a>
-                  <a href="{{ url("/admin/products/".$product->id."/images") }}" rel="tooltip" title="ver imagenes del producto" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-camara">
-                    </a>
-                  <button type="submit" rel="tooltip" title="eliminar producto" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-times">
+                <a href="{{ url("/admin/products/".$product->id."/edit") }}" rel="tooltip" title="editar productos" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-pencil"></span>
+                </a>
+
+                  <a href="{{ url("/admin/products/".$product->id."/images") }}" rel="tooltip" title="ver imagenes del producto" 
+                    class="btn btn-sm btn-danger" ><span class="glyphicon glyphicon-picture"></span>
+                </a>
+
+                  <button type="submit" rel="tooltip" title="eliminar producto" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span>
                     </button>
                   </form>
               </td>
