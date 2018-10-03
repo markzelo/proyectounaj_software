@@ -19,7 +19,7 @@
 
 
 
-    <title>Gestion de incidencias</title>
+    <title>Scit</title>
 
 
     <script>

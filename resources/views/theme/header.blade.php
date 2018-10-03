@@ -12,7 +12,7 @@
 
     </button>
 
-    <a class="navbar-brand" href="/home">Incidencias</a>
+    <a class="navbar-brand" href="/home">Gestor de Soporte Tecnico</a>
 
 </div>
 <!-- 
