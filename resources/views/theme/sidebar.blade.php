@@ -122,7 +122,7 @@
                             </li>
                             <li class="treeview">
                                 <a href='/admin/products'>
-                                    <i class="fa fa-fw fa-database"></i> <span> Edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
+                                    <i class="fa fa-fw fa-database"></i> <span> Edicion de productos en venta</span> 
                                 </a>
                             </li>
                         </ul>
