@@ -4,11 +4,11 @@
 
 
          <!-- Logo -->
-             {{--  <li>
+           {{--  <li>
                   <div class="logo-wrapper waves-light">
-                      <a href=""><img src="" class="img-fluid flex-center"></a>
+                      <a href=""><img src="images/" class="img-fluid flex-center"></a>
                   </div>
-              </li> --}}
+              </li>  --}}
               <!--/. Logo -->
 
         <ul class="nav" id="side-menu">
@@ -58,9 +58,21 @@
                             </a>
                         </li>
                         <li class="treeview">
-                            <a href='/charts'>
-                            <i class="fa fa-area-chart"></i> <span> Gráficas</span> <i class="fa fa-angle-left pull-right"></i>
-                            </a>
+                                <a><i class="fa fa-area-chart"></i> Gráficas<i class="fa fa-chevron-down"></i></a>
+                                <ul class="nav nav-second-level">
+                                    <li @if(request()->is('charts')) class="active" @endif>
+                                        <a href="/pie"><i class="fa fa-pie-chart"></i> Circular</a>
+                                    </li> 
+                                    <li @if(request()->is('charts')) class="active" @endif>
+                                        <a href="/line"><i class="fa fa-line-chart"></i> Líneas</a>
+                                    </li> 
+                                    <li @if(request()->is('charts')) class="active" @endif>
+                                        <a href="/bar"><i class="fa fa-bar-chart"></i> Barras</a>
+                                    </li>
+                                    <li @if(request()->is('charts')) class="active" @endif>
+                                        <a href="/area"><i class="fa fa-area-chart"></i> Área</a>
+                                    </li>
+                                </ul>
                         </li>
                             <li class="treeview">
                              <a href='/gcalendar'>
@@ -122,7 +134,7 @@
                             </li>
                             <li class="treeview">
                                 <a href='/admin/products'>
-                                    <i class="fa fa-fw fa-database"></i> <span> Edicion de productos en venta</span> <i class="fa fa-angle-left pull-right"></i>
+                                    <i class="fa fa-fw fa-database"></i> <span> Edicion de productos en venta</span> 
                                 </a>
                             </li>
                         </ul>
