@@ -4,11 +4,11 @@
 
 
          <!-- Logo -->
-             {{--  <li>
+           {{--  <li>
                   <div class="logo-wrapper waves-light">
-                      <a href=""><img src="" class="img-fluid flex-center"></a>
+                      <a href=""><img src="images/" class="img-fluid flex-center"></a>
                   </div>
-              </li> --}}
+              </li>  --}}
               <!--/. Logo -->
 
         <ul class="nav" id="side-menu">

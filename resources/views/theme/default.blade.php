@@ -19,6 +19,7 @@
 
 
 
+
     <title>Scit</title>
 
 
@@ -42,10 +43,13 @@
 
 
 
+
+
     <!-- Custom CSS -->
 
     <link href="{!! asset('theme/dist/css/sb-admin-2.css') !!}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('welcome/normalize.css') }}">
+
 
 
 
@@ -58,6 +62,8 @@
     <!-- Custom Fonts -->
 
     <link href="{!! asset('theme/vendor/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="{{{ asset('images/5927.png') }}}">
 
 
 
