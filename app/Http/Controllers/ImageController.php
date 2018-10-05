@@ -45,9 +45,10 @@ class ImageController extends Controller
             $deleted=true;
 
         }else{
-            $fullPath= public_path() ."/images/products" .$productImage->images;
+            $fullPath= public_path() ."/images/products/" .$productImage->images;
             $deleted=File::delete($fullPath);
         }
+        //si todo esta correcto eleiminar  tambien de la base de datos
         if($deleted){
             $productImage->delete();
         }
