@@ -21,7 +21,11 @@ class CreateProductImagesTable extends Migration
 
 
             $table->integer('product_id')->unsigned()->nullable();//referencia es la fk
-            $table->foreign('product_id')->references('id')->on('products');
+            // $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')
+            ->references('id')
+            ->on('products')
+            ->onDelete('set null');
 
 
             $table->timestamps();

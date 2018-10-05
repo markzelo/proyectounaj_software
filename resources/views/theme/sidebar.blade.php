@@ -21,40 +21,9 @@
                 @if (! auth()->user()->is_client)
 
                     <li>
-
-                        <li>
-                            <a><i class="fa fa-database"></i> Reportes<i class="fa fa-chevron-down"></i></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/reportes" onclick="cargarlistado(3,1);" ><i class="fa fa-wrench"></i> Reportes</a>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                        <li>
-                            <a><i class="fa fa-users"></i> Users<i class="fa fa-chevron-down"></i></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/verusuarios"><i class="fa fa-users fa-fw"></i> Consultar usuarios</a>
-                                </li>
-                            </ul>
-                            
-                            <li class="treeview">
-                                  <a href="#">
-                                    <i class="fa fa-book"></i> <span> Biblioteca de contenidos</span> <i class="fa fa-angle-left pull-right"></i>
-                                </a>
-                            </li>
-
-                            <li class="treeview">
-                              <a href="#">
-                                <i class="fa fa-fw fa-database"></i> <span> Analisis y Reportes</span> <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                        </li>
-
-                       
                         <li class="treeview">
                              <a href='/PdfDemo'>
-                                <i class="fa fa-file-pdf-o"></i> <span> Exportar a PDF</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-file-pdf-o"></i> <span> Exportar a PDF</span> </i>
                             </a>
                         </li>
                         <li class="treeview">
@@ -76,7 +45,7 @@
                         </li>
                             <li class="treeview">
                              <a href='/gcalendar'>
-                            <i class="fa fa-calendar"></i> <span> Registro de eventos</span> <i class="fa fa-angle-left pull-right"></i>
+                            <i class="fa fa-calendar"></i> <span> Registro de eventos</span> </i>
                             </a>
                         </li>
 

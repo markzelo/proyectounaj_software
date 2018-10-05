@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
+<<<<<<< HEAD
+  background-color: #f8f8f8;
+  
+=======
  
    background-color: #f8f8f8;
     /*background-image: url("img_tree.png");
@@ -11,6 +15,7 @@ body {
     background-position: right top;*/
  
 
+>>>>>>> develop
 }
 #wrapper {
   width: 100%;
