@@ -32,7 +32,7 @@
                <p>{{ $product->long_description }}</p>
             </div>
             {{-- abrir modal y que modal abrir --}}
-            <button class="btn btn-primary btn-round" data-toggle="modal" data-target="Modaladdcarrito">
+            <button class="btn btn-primary btn-round" data-toggle="modal" data-cart="{{  $product->id }}">
               <i class="material-icons">+ </i>añadir al carrito</button>
 
             <div class="row">
@@ -41,16 +41,7 @@
                   <div class="nav_align-center">
                     <div class="tab-content gallery">
                       <div class="row">
-                        {{-- <div class="col-md-6">
-                          @foreach($imagesLeft as $image)
-                          <img src="{{ $image->url }}" class="img-rounded"/>
-                          @endforeach
-                        </div>
-                         <div class="col-md-6">
-                          @foreach($imagesRight as $image)
-                          <img src="{{ $image->url }}" class="img-rounded"/>
-                          @endforeach
-                        </div> --}}
+                       
                         
                       </div>
                       
@@ -88,32 +79,32 @@
 </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="Modaladdcarrito" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-              <div class="modal-dialog">
+            <div class="modal fade" tabindex="-1" role="dialog" id="Modaladdcarrito">
+              <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" 
-                      aria-hidden="true">&times; </button>
-                       <h5 class="modal-title" id="myModalLabel">añade cantidada del producto elegido a carrito de compras</h5>
+                    aria-hidden="true">&times; </button>
+                    <h5 class="modal-title" id="myModalLabel">añade cantidada del producto elegido a carrito de compras</h5>
                   </div>
-{{-- ruta absoluta --}}
-                  <form method="post" action="{{ url('/cart') }}">
+                  {{-- ruta absoluta --}}
+                  <form action={{  "/products/". $product->id }} method="POST">
                     {{ csrf_field() }}
                     <input type="type" name="product_id" value="{{ $product->id }}">
 
-                  <div class="modal-body">
-                    <input type="number" name="quantity" value="1" class="form-control">
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar compra</button>
-                    <button type="button" class="btn btn-primary">añadir compra</button>
-                  </div>
+                    <div class="modal-body">
+                      <input type="number" name="quantity" value="1" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar compra</button>
+                      <button type="button" class="btn btn-primary">añadir compra</button>
+                    </div>
                   </form>
-
 
                 </div>
               </div>
             </div>
+             
 
 @endsection
 @section('scripts')

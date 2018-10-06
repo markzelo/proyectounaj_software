@@ -4,21 +4,19 @@
 
 <div class="pann"></div>
 <div class="panel panel-primary">
-  <div class="panel-heading">Dashboard</div>
+  <div class="panel-heading">productos comerciales de mantenimiento</div>
 
   <div class="panel-body">
 
-    {{-- @if(auth()->user()->is_client) --}}
+   
 
     <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title">productos comerciales de mantenimiento </h3>
-      </div>
+     
       <div class="team">
       <div class="row">
-        <a href="{{ url('/admin/products/create') }}" class="btn btn-primary btn-round" 
-        >nuevos productos</a>
-
+        <div class="text-center">
+        <a href="{{ url('/admin/products/create') }}" class="btn btn-danger btn-round">nuevos productos</a>
+</div>
       <table class="table">
         <thead>
           <tr>
@@ -80,7 +78,7 @@
 
   </div>
 
-  {{--  @endif --}}
+
 
 
 </div>
