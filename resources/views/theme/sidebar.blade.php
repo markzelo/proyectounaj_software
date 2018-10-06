@@ -23,7 +23,7 @@
                     <li>
                         <li class="treeview">
                              <a href='/PdfDemo'>
-                                <i class="fa fa-file-pdf-o"></i> <span> Exportar a PDF</span> </i>
+                                <i class="fa fa-file-pdf-o"></i> <span> Base de Conocimiento</span> </i>
                             </a>
                         </li>
                         <li class="treeview">

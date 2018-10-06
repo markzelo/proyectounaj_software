@@ -49,7 +49,7 @@
 				</table>
 			</div>
 
-			 <!-- Footer Elements -->
+			{{--  <!-- Footer Elements -->
 			 <div class="container">
 
 			 	<!--Grid row-->
@@ -62,7 +62,7 @@
 			 			<a href="" class="btn btn-primary">contenido audiovisual</a>
 
 			 			<div class="embed-responsive embed-responsive-16by9 mb-4">
-			 				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/D4dyPBJeTko" allowfullscreen></iframe>
+			 				<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
 			 			</div>
 
 			 		</div>
@@ -72,7 +72,7 @@
 			 	<!--Grid row-->
 
 			 </div>
-			 <!-- Footer Elements -->
+			 <!-- Footer Elements --> --}}
 
 
 
