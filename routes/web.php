@@ -112,6 +112,10 @@ Route::get('/area', 'ChartController@index_area');
 Route::get('/gcalendar', 'EventController@index');
 Route::post('/events', 'EventController@addEvent')->name('events.add');
 
+// //datatables
+// Route::get('/user-datatable', 'UserController@datatable')->name('user.datatable');
+// Route::get('/user-data', 'UserController@productsList')->name('user.data');
+
 
 
 //metodod desde la pagina de routes
