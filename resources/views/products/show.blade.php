@@ -32,29 +32,10 @@
                <p>{{ $product->long_description }}</p>
             </div>
             {{-- abrir modal y que modal abrir --}}
-            <button class="btn btn-primary btn-round" data-toggle="modal" data-cart="{{  $product->id }}">
+            <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalEditCart">
               <i class="material-icons">+ </i>añadir al carrito</button>
 
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                <div class="profile-tabs">
-                  <div class="nav_align-center">
-                    <div class="tab-content gallery">
-                      <div class="row">
-                       
-                        
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-
+           
 
            
             
@@ -79,19 +60,17 @@
 </div>
 
             <!-- Modal -->
-            <div class="modal fade" tabindex="-1" role="dialog" id="Modaladdcarrito">
-              <div class="modal-dialog" role="document">
+            <div class="modal fade"  id="modalEditCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" >
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" 
-                    aria-hidden="true">&times; </button>
-                    <h5 class="modal-title" id="myModalLabel">añade cantidada del producto elegido a carrito de compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; </button>
+                    <h4 class="modal-title" id="myModalLabel">añade cantidad del producto elegido a carrito de compras</h4>
                   </div>
                   {{-- ruta absoluta --}}
                   <form action={{  "/products/". $product->id }} method="POST">
                     {{ csrf_field() }}
-                    <input type="type" name="product_id" value="{{ $product->id }}">
-
+                   
                     <div class="modal-body">
                       <input type="number" name="quantity" value="1" class="form-control">
                     </div>
@@ -104,7 +83,7 @@
                 </div>
               </div>
             </div>
-             
+            
 
 @endsection
 @section('scripts')

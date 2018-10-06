@@ -1,16 +1,13 @@
 //programa de evento 
 $(function() {
-	$('[data-cart]').on('click', addCartDetailModal);
+	$('[data-cart]').on('click', editCartModal);
 	
 });
 
-function addCartDetailModal() {
-	// id
-	var cart_details_id = $(this).data('cart');
-	$('#cart_details_id').val(cart_detail_id);
-	// name
-	var cart_details_quantily = $(this).parent().prev().integer();
-	$('#cart_details_quantily').val(cart_detail_quantily);
+function editCartModal() {
+	
+	var cart_detail_quantity = $(this).parent().prev().integer();
+	$('#cart_detail_quantity').val(cart_detail_quantity);
 	// show
-	$('#Modaladdcarrito').modal('show');
+	$('modalEditCart').modal('show');
 }
