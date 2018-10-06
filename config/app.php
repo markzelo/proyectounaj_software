@@ -169,7 +169,7 @@ return [
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         ConsoleTVs\Charts\ChartsServiceProvider::class,
         Elibyy\TCPDF\ServiceProvider::class,
-        // Yajra\DataTables\DatatablesServiceProvider::class,
+       // Yajra\Datatables\DatatablesServiceProvider::class,
 
 
         //
@@ -234,7 +234,7 @@ return [
         
         'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
-        // 'Datatables' => Yajra\DataTables\Facades\DataTables::class,
+        // 'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 
