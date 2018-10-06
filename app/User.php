@@ -109,10 +109,11 @@ class User extends Authenticatable
      //accesor para carritos
      public function  getCartIdAttribute(){
       $this->carts()->where('status','Active')->first();
+      //si coincide hay un carrito activo
       if ($cart) 
         return $cart;
 
-      //si no 
+      //si no se creea un nuevo carrito activo
       $cart=new Cart();
       $cart->status='Active';
       $cart->user_id=$this->id;

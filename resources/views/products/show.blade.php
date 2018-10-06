@@ -68,8 +68,11 @@
                     <h4 class="modal-title" id="myModalLabel">añade cantidad del producto elegido a carrito de compras</h4>
                   </div>
                   {{-- ruta absoluta --}}
-                  <form action={{  "/products/". $product->id }} method="POST">
+                  {{-- accion al controlador metodo  store de cart_detail controller --}}
+                  <form action="{{ url("/cart") }}" method="POST">
+
                     {{ csrf_field() }}
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
                    
                     <div class="modal-body">
                       <input type="number" name="quantity" value="1" class="form-control">

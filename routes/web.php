@@ -62,7 +62,7 @@ Route::get('/listas', 'GalleryController@index');
 
 
 Route::get('/products/{id}/', 'SaleProductController@show');
-Route::get('/cart', 'CartDetailController@store');
+Route::post('/cart', 'CartDetailController@store');
 
 
 Route::get('/admin/products', 'ProductController@index');//listado

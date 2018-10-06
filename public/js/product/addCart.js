@@ -5,9 +5,12 @@ $(function() {
 });
 
 function editCartModal() {
-	
-	var cart_detail_quantity = $(this).parent().prev().integer();
-	$('#cart_detail_quantity').val(cart_detail_quantity);
+	// id
+	var cartdetail_id = $(this).data('cartdetail');
+	$('#cardtdeail_product_id').val(cartdetail_id);
+	// name
+	var cartdetail_quantity = $(this).parent().prev().integer();
+	$('#cartdetail_quantity').val(cartdetail_quantity);
 	// show
 	$('modalEditCart').modal('show');
 }
