@@ -41,7 +41,7 @@ class UserController extends Controller
     	$user->name = $request->input('name');
     	$user->email = $request->input('email');
     	$user->password = bcrypt($request->input('password'));
-    	$user->role = 1;    	
+    	$user->role = 2;    	//colocar opciones para indcar si va a crearse un tecnico cliente
     	$user->save();
 
     	return back()->with('notification', 'Usuario registrado exitosamente.');
