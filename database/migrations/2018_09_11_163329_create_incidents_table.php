@@ -22,8 +22,7 @@ class CreateIncidentsTable extends Migration
            
             $table->string('severity',1);
             $table->string('organization');
-
-
+           
 
             $table->boolean('active')->default(1);//estado por defecto
 

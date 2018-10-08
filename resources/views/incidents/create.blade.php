@@ -49,6 +49,8 @@
                         <label for="description">Descripción</label>
                         <textarea name="description" class="form-control">{{ old("description") }}</textarea>
                     </div>
+
+
                     <div class="form-group">
                         <button class="btn btn-primary">Registrar incidente</button>
 

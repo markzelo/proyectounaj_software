@@ -4,19 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-<<<<<<< HEAD
-  background-color: #f8f8f8;
-  
-=======
- 
-   background-color: #f8f8f8;
-    /*background-image: url("img_tree.png");
-    background-repeat: no-repeat;
-    background-position: right top;*/
- 
 
->>>>>>> develop
+  
+  
+
+    background-image: url("/images/04 -T.jpg");
+    background-size: 250px 850px;
+   background-repeat: no-repeat;
 }
+ 
 #wrapper {
   width: 100%;
 }

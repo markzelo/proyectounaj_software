@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;//directiva use para usar la clse controller
 use App\User;
 use App\Project;
 use App\ProjectUser;
-use Datatables;
+
 
 class UserController extends Controller
 {
@@ -42,7 +42,7 @@ class UserController extends Controller
     	$user->name = $request->input('name');
     	$user->email = $request->input('email');
     	$user->password = bcrypt($request->input('password'));
-    	$user->role = 1;    	
+    	$user->role = 2;    //colocar opciones para elegir si es tecnico cliente	
     	$user->save();
 
     	return back()->with('notification', 'Usuario registrado exitosamente.');
