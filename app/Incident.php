@@ -10,12 +10,14 @@ class Incident extends Model
             "category_id"=>"sometimes|exists:categories,id",
             "severity"=>"required|in:M,N,A",
             "title"=>"required|min:5",
+             "organization"=>"required|min:5",
             "description"=>"required|min:15"
         ];
     public static $messages=[
 
             "title.required"=>"debe ingresar un titulo.",
             "title.min"=>"el titulo debe tener 5 caracteres",
+             "organization.min"=>"la organizacion  debe tener 5 caracteres",
             "description.required"=>"es necesario ingresar algo",
             "description.min"=>"debe tener al mos 15 letras"
 

@@ -41,8 +41,10 @@ class IncidentController extends Controller
         $this->validate($request, Incident::$rules, Incident::$messages);
 
         $incident = new Incident();
+       
         $incident->category_id = $request->input('category_id') ?: null;
         $incident->severity = $request->input('severity');
+        $incident->organization = $request->input('organization');
         $incident->title = $request->input('title');
         $incident->description = $request->input('description');
 
@@ -70,8 +72,11 @@ class IncidentController extends Controller
         //no es una nueva instancia
         $incident = Incident::findOrFail($id);
 
+         
+
         $incident->category_id = $request->input('category_id') ?: null;
         $incident->severity = $request->input('severity');
+         $incident->organization = $request->input('organization');
         $incident->title = $request->input('title');
         $incident->description = $request->input('description');
 

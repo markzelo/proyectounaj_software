@@ -24,6 +24,11 @@
             {{ csrf_field() }}
 
             <div class="form-group">
+                <label for="organization">organizacion</label>
+                <input type="text" name="organization" class="form-control" value="{{ old('organization', $incident->organization) }}">
+            </div>
+
+            <div class="form-group">
                 <label for="category_id">Categoría</label>
 
                 <select name="category_id" class="form-control">
