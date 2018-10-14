@@ -7,6 +7,7 @@ use App\Category;
 use App\Incident;
 use App\Project;
 use App\ProjectUser;
+use Illuminate\Support\Facades\Input;
 
 
 class IncidentController extends Controller
@@ -53,6 +54,13 @@ class IncidentController extends Controller
         $incident->client_id = $user->id;
         $incident->project_id = $user->selected_project_id; //proyecto seleccionado
         $incident->level_id = Project::find($user->selected_project_id)->first_level_id; // en nivel esta seleccionado
+
+
+        if(Input::hasFile('image')){
+            $file=Input::file('image');
+            $file->move(public_path().'/images/',$file->getClientOriginalName());
+            $incident->image=$file->getClientOriginalName();
+        }
 
         $incident->save();
 

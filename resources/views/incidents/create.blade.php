@@ -53,6 +53,17 @@
                         <label for="description">Descripción</label>
                         <textarea name="description" class="form-control">{{ old("description") }}</textarea>
                     </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="image">Imagen</label>
+                           <input type="file" name="image" class="form-control">
+                            
+                        </div>
+                        
+                    </div>
+
+
+
                     <div class="form-group">
                         <button class="btn btn-primary">Registrar incidente</button>
 
