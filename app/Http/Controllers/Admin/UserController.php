@@ -95,13 +95,6 @@ class UserController extends Controller
         return back()->with('notification', 'El usuario se elimino correctamente.');
     }
 
-    // public function datatable(){
-    //     return view('user-datatable');
-    // }
- 
-    // public function usersList(){
-    //     return Datatables::of(User::query())->make(true);
-    // }
-
+    
 
 }

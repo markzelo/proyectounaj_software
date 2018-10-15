@@ -22,7 +22,7 @@ class ImageController extends Controller
     	$file=$request->file("photo");
     	$path=public_path() ."/images/products";
         //nombre del archivo original del usuario
-        //uniqued secuencia denumeros en bae a hora del sistema
+        //uniqued secuencia de numeros hora del sistema en nuevo nombre de imagen
     	$fileName=uniqid() .$file->getClientOriginalName();
     	$moved= $file->move($path, $fileName);
     	//se regsitre cunado la imagen se gurad correctamente como archivo
@@ -37,18 +37,20 @@ class ImageController extends Controller
 
     }
 
-    public function destroy(Request $request ,$id){
-
-        $productImage =productImage::find($request->input("image_id"));
-        //si la imagen es una url completa ya essta eliminada
-        if(substr($productImage->image, 0, 4) === "http"){
+    public function destroy(Request $request, $id){
+        //image_id de input
+        $productImage =productImage::find($request->image_id);
+//pone true a deleted si la imagen es de una http
+        if(substr($productImage->image,0, 4)==="http"){
             $deleted=true;
-
         }else{
-            $fullPath= public_path() ."/images/products/" .$productImage->images;
-            $deleted=File::delete($fullPath);
+        //si la imagen esta en local
+        $fullPath= public_path() ."/images/products/" .$productImage->image;
+        $deleted=File::delete($fullPath);
         }
+
         //si todo esta correcto eleiminar  tambien de la base de datos
+        //si deleted vale true
         if($deleted){
             $productImage->delete();
         }

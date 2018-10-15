@@ -34,11 +34,6 @@
             {{-- abrir modal y que modal abrir --}}
             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalEditCart">
               <i class="material-icons">+ </i>añadir al carrito</button>
-
-           
-
-           
-            
           </div>
         </div>
           
@@ -53,12 +48,8 @@
 
   </div>
 
- 
-
-
 </div>
 </div>
-
             <!-- Modal -->
             <div class="modal fade"  id="modalEditCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog" >
@@ -72,6 +63,7 @@
                   <form action="{{ url("/cart") }}" method="POST">
 
                     {{ csrf_field() }}
+                    {{-- campo oculto enviado --}}
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                    
                     <div class="modal-body">
@@ -79,15 +71,13 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar compra</button>
-                      <button type="button" class="btn btn-primary">añadir compra</button>
+                      <button type="submit" class="btn btn-primary">añadir compra</button>
                     </div>
                   </form>
 
                 </div>
               </div>
             </div>
-            
-
 @endsection
 @section('scripts')
     <script src="/js/product/addCart.js"></script>

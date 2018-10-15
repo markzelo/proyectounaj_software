@@ -31,6 +31,7 @@
           <form method="post" action="">
             {{ csrf_field() }}
             {{ method_field("DELETE") }}
+            {{-- para enviar en el request  image id --}}
             <input type="hidden" name="image_id" value="{{ $image->id }}">
            <button type="submit" class="btn btn-danger btn-roun">eliminar imagen</button>
           </form>
