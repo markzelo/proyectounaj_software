@@ -55,11 +55,11 @@ class IncidentController extends Controller
         $incident->project_id = $user->selected_project_id; //proyecto seleccionado
         $incident->level_id = Project::find($user->selected_project_id)->first_level_id; // en nivel esta seleccionado
 
-
+        $incident->image = $request->input('image');
         if(Input::hasFile('image')){
             $file=Input::file('image');
             $file->move(public_path().'/images/',$file->getClientOriginalName());
-            $incident->image=$file->getClientOriginalName();
+          
         }
 
         $incident->save();

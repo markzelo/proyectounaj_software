@@ -91,6 +91,39 @@
                 </div>
             </div>
 
+
+           
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Incidencias imagenes</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tbody id="dashboard_image_incidents">
+                             <div class="row">
+                                  @foreach ($image_incidents as $incident)
+                                  <div class="col-md-4">
+                                    <div class="panel-body">
+                                      <td>{{ $incident->image }}</td>
+                                    </div>
+                                  </div> 
+                                  @endforeach
+                             </div>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             </div>
+
+
+
+
+
+
+
+
             @endif
 
             <div class="panel panel-success">

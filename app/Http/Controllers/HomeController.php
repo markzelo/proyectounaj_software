@@ -8,6 +8,7 @@ use App\Category;
 use App\Incident;
 use App\User;
 use App\ProjectUser;
+use DB;
 
 class HomeController extends Controller
 {
@@ -57,6 +58,9 @@ class HomeController extends Controller
                 }
             }
 
+            $image_incidents=DB::select('SELECT * FROM `incidents`');
+            $active_incidents=DB::select('SELECT * FROM `incidents` WHERE 1');
+
             //consulatar incidencis reportadas por mi 
 
             $incidents_by_me = Incident::where('client_id', $user->id)
@@ -66,9 +70,12 @@ class HomeController extends Controller
                 $my_incidents = [];
                 $pending_incidents = [];
                 $incidents_by_me = [];
+                $image_incidents=[];
+                $active_incidents=[];
+
             }
 
-        return view('home')->with(compact('my_incidents', 'pending_incidents', 'incidents_by_me'));
+        return view('home')->with(compact('my_incidents', 'pending_incidents', 'incidents_by_me','active_incidents','image_incidents'));
        
     }
 

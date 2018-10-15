@@ -114,5 +114,10 @@ class Incident extends Model
         // o
         return 'Pendiente';
     }
+   public function getUrlAttribute(){
+        
+         return "/images/" .$this->image;
+
+    }
 
 }
