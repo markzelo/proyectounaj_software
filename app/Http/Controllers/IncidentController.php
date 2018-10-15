@@ -8,6 +8,7 @@ use App\Incident;
 use App\Project;
 use App\ProjectUser;
 use Illuminate\Support\Facades\Input;
+use File;
 
 
 class IncidentController extends Controller
@@ -55,15 +56,20 @@ class IncidentController extends Controller
         $incident->project_id = $user->selected_project_id; //proyecto seleccionado
         $incident->level_id = Project::find($user->selected_project_id)->first_level_id; // en nivel esta seleccionado
 
-        $incident->image = $request->input('image');
-        if(Input::hasFile('image')){
-            $file=Input::file('image');
-            $file->move(public_path().'/images/',$file->getClientOriginalName());
-          
-        }
-
+        $file=$request->file("photo");
+        $path=public_path() ."/images/incidents";
+        //nombre del archivo original del usuario
+        //uniqued secuencia denumeros en bae a hora del sistema
+        $fileName=$file->getClientOriginalName();
+        $moved= $file->move($path, $fileName);
+        //se regsitre cunado la imagen se gurad correctamente como archivo
+        
+           
+        $incident->image= $fileName;
+            
         $incident->save();
 
+        
         return back();
     }
   

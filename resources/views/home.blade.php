@@ -105,7 +105,9 @@
                                   @foreach ($image_incidents as $incident)
                                   <div class="col-md-4">
                                     <div class="panel-body">
-                                      <td>{{ $incident->image }}</td>
+                                      <td>
+                                        <img src="{{asset('/images/'.$incident->image)}}" alt="{{ $incident->title}}" height="100px" width="100px" class="img-thumbnail">
+                                    </td>
                                     </div>
                                   </div> 
                                   @endforeach
@@ -115,6 +117,7 @@
                         </table>
                     </div>
                 </div>
+
              </div>
 
 

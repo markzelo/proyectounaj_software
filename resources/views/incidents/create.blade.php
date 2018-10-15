@@ -21,7 +21,7 @@
                     </div>
                 @endif
 
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="organization">organizacion</label>
@@ -56,7 +56,7 @@
                     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                         <div class="form-group">
                             <label for="image">Imagen</label>
-                           <input type="file" name="image" class="form-control">
+                            <input type="file" name="photo" required>
                             
                         </div>
                         
