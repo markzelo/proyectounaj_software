@@ -146,12 +146,12 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
    //categorias--------------------------------------------------------
     Route::post('/categorias', 'CategoryController@store');
      Route::post('/categoria/editar', 'CategoryController@update');
-     Route::post('/categoria/{id}/eliminar', 'CategoryController@delete');
+     Route::get('/categoria/{id}/eliminar', 'CategoryController@delete');
 
     //niveles-------------------------------------------------------------
     Route::post('/niveles', 'LevelController@store');
     Route::post('/nivel/editar', 'LevelController@update');
-    Route::post('/nivel/{id}/eliminar', 'LevelController@delete');
+    Route::get('/nivel/{id}/eliminar', 'LevelController@delete');
 
     // Project-User-------------------------------------------
     Route::post('/proyecto-usuario', 'ProjectUserController@store');

@@ -166,7 +166,7 @@
       <form action="/nivel/editar" method="POST">
           {{ csrf_field() }}
           <div class="modal-body">        
-            <input type="hidden" name="Level_id" id="level_id" value="">
+            <input type="hidden" name="level_id" id="level_id" value="">
             <div class="form-group">
                 <label for="name">Nombre del nivel</label>
                 <input type="text" class="form-control" name="name" id="level_name" value="">
