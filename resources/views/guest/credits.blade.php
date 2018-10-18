@@ -13,24 +13,16 @@
 
     <!-- Grid column -->
     <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">Anna Williams</h5>
-      <p class="text-uppercase blue-text"><strong>Graphic designer</strong></p>
-      <p class="grey-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci  sed quia non numquam modi tempora eius.</p>
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Fernando Luis Vargas</h5>
+      <p class="text-lower blue-text"><strong>Full Stack developer</strong></p>
       <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
+        <!-- Email -->
         <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
         </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg tw-ic">
-          <i class="fa fa-twitter blue-text"> </i>
-        </a>
-        <!-- Instagram -->
+        <!-- Github -->
         <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-instagram blue-text"> </i>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/fernandovargasvarela"><i class="fa fa-github fa-lg"> </i></a> 
         </a>
       </ul>
     </div>
@@ -38,91 +30,67 @@
 
     <!-- Grid column -->
     <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">John Doe</h5>
-      <p class="text-uppercase blue-text"><strong>Web developer</strong></p>
-      <p class="grey-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ipsa accusantium doloremque rem laudantium totam aperiam.</p>
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Marcelo Herrera</h5>
+      <p class="text-lower blue-text"><strong>Full Stack developer</strong></p>
       <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
+        <!-- Email -->
         <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">Maria Smith</h5>
-      <p class="text-uppercase blue-text"><strong>Photographer</strong></p>
-      <p class="grey-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est fugiat nulla id eu laborum.</p>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-instagram blue-text"> </i>
-        </a>
-        <!-- Dribbble -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-dribbble blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">Tom Adams</h5>
-      <p class="text-uppercase blue-text"><strong>Backend developer</strong></p>
-      <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur totam officia voluptates perferendis voluptatibus aut.</p>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
         </a>
         <!-- Github -->
         <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-github blue-text"> </i>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/markzelo"><i class="fa fa-github fa-lg"> </i></a> 
         </a>
       </ul>
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
-    <div class="col-lg-4 col-md-6">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">Maria Smith</h5>
-      <p class="text-uppercase blue-text"><strong>Photographer</strong></p>
-      <p class="grey-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est fugiat nulla id eu laborum.</p>
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Carlos Quiroz</h5>
+      <p class="text-lower blue-text"><strong>Full Stack developer</strong></p>
       <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
+        <!-- Email -->
         <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
         </a>
-        <!-- Instagram -->
+        <!-- Github -->
         <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-instagram blue-text"> </i>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/csq"><i class="fa fa-github fa-lg"> </i></a> 
         </a>
-        <!-- Dribbble -->
+      </ul>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Gustavo Campitelli</h5>
+      <p class="text-lower blue-text"><strong>Full Stack developer</strong></p>
+      <ul class="list-unstyled mb-0">
+        <!-- Email -->
+        <a class="p-2 fa-lg fb-ic">
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
+        </a>
+        <!-- Github -->
         <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-dribbble blue-text"> </i>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/DaniCampitelli"><i class="fa fa-github fa-lg"> </i></a> 
+        </a>
+      </ul>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Gimenez Agustin</h5>
+      <p class="text-lower blue-text"><strong>Full Stack developer</strong></p>
+      <ul class="list-unstyled mb-0">
+        <!-- Email -->
+        <a class="p-2 fa-lg fb-ic">
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
+        </a>
+        <!-- Github -->
+        <a class="p-2 fa-lg ins-ic">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Orixur"><i class="fa fa-github fa-lg"> </i></a> 
         </a>
       </ul>
     </div>
@@ -130,27 +98,22 @@
 
     <!-- Grid column -->
     <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-      <div class="avatar mx-auto">
-        <img src="/images/client.png" class="rounded-circle z-depth-1" alt="Sample avatar">
-      </div>
-      <h5 class="font-weight-bold mt-4 mb-3">Tom Adams</h5>
-      <p class="text-uppercase blue-text"><strong>Backend developer</strong></p>
-      <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur totam officia voluptates perferendis voluptatibus aut.</p>
+      <h5 class="text-uppercase font-weight-bold mt-4 mb-3">Oscar Cortez</h5>
+      <p class="text-lower blue-text"><strong>Profesor</strong></p>
       <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
+        <!-- Email -->
         <a class="p-2 fa-lg fb-ic">
-          <i class="fa fa-facebook blue-text"> </i>
+          <a href="mailto:XXXXXXX@gmail.com?subject=Mail from Our Site"><i class="fa fa-envelope-o fa-lg"> </i></a>  
         </a>
         <!-- Github -->
         <a class="p-2 fa-lg ins-ic">
-          <i class="fa fa-github blue-text"> </i>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/XXXXXX"><i class="fa fa-github fa-lg"> </i></a> 
         </a>
       </ul>
     </div>
     <!-- Grid column -->
 
-  
     </div>
-    </div>
+  </div>
 </div>
 @endsection
