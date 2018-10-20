@@ -33,7 +33,9 @@
             </div>
             {{-- abrir modal y que modal abrir --}}
             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalEditCart">
-              <i class="material-icons">+ </i>añadir al carrito</button>
+              <i class="material-icons">+ </i>añadir al carrito</button> 
+              {{--  <button type="button" class="btn btn-sm btn-primary" title="modal" data-cart="{{ $product->id }}">
+              <i class="material-icons">+ </i>añadir al carrito</button> --}}
           </div>
         </div>
           
