@@ -32,6 +32,8 @@ Auth::routes();
 
 //METODOS A LLAMAR PARA LAS FUNCIONES DE CARGA DE VISTAS
 Route::get('/home', 'HomeController@index');
+
+
 Route::get('/seleccionar/proyecto/{id}', 'HomeController@selectProject');
 //-------------------------------------------------------------------
 

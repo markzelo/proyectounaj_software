@@ -105,10 +105,16 @@
                                   @foreach ($image_incidents as $incident)
                                   <div class="col-md-4">
                                     <div class="panel-body">
-                                      <td>
-                                        <img src="{{asset('/images/'.$incident->image)}}" alt="{{ $incident->title}}" height="100px" width="100px" class="img-thumbnail">
-                                    </td>
-                                    </div>
+
+                                        <td>
+                                            <img src="{{   url('/images/incidents/'. $incident->image) }}" alt="Thumbnail Image" class="rounded" width="250"> 
+                                            <h4 class="title">
+                                                <a href="{{ url("/incidents/". $incident->id) }}">{{ $incident->title }}<a/><br>
+                                                </h4>
+                                            </td>
+                                           
+
+                                        </div>
                                   </div> 
                                   @endforeach
                              </div>
@@ -150,8 +156,9 @@
                             @foreach ($incidents_by_me as $incident)
                                 <tr>
                                     <td>
-                                        <a href="/ver/{{ $incident->id }}">
-                                            {{ $incident->id }}
+                                       
+                                         <a href="/ver/{{ $incident->id }}" class="btn btn-sm btn-primary" >
+                                           {{ $incident->id }} - <span class="glyphicon glyphicon-search"></span>
                                         </a>
                                     </td>
                                     <td>{{ $incident->category_name}}</td>
