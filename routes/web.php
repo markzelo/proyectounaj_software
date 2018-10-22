@@ -100,8 +100,8 @@ Route::get('/html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'PdfDemoController@htmlToP
 
 
 //graficas
-Route::get('/charts', 'ChartController@index')->name('chart.index');
-Route::get('/pie', 'ChartController@index');
+//Route::get('/charts', 'ChartController@index')->name('chart.index');
+Route::get('/pie', 'ChartController@index_pie');
 Route::get('/line', 'ChartController@index_line');
 Route::get('/bar', 'ChartController@index_bar');
 Route::get('/area', 'ChartController@index_area');
