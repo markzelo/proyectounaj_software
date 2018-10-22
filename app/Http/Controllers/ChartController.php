@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Product;
+use DB;
 
 
 use App\Http\Controllers\Controller;
@@ -17,13 +18,15 @@ class ChartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   public function index()
+   public function index_pie()
     {
         
-        $pastel = Product::all();
-                  // select('products.name','producto_venta.venta')
-                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
-        return view('/charts/pie',['pastel'=>$pastel]);
+        $datas = DB::table('users')
+                        ->select(DB::raw('count(*) as Usuarios, role as Rol'))
+                        ->groupBy('Rol')
+                        ->get();
+
+        return view('/charts/pie', compact('datas'));
         
     }
 
