@@ -13,10 +13,12 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
+        // contiene carrito activos de cada usuario y pedidos de compra
         Schema::create('carts', function (Blueprint $table) {
             $table->increments('id');
-
+            // orden
             $table->date('order_date')->nullable();
+            // atendido
             $table->date('arrived_date')->nullable();
             //activo - pendiente  -cancelado 
             $table->string('status');

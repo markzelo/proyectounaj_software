@@ -31,11 +31,12 @@
             <div class="description text-center">
                <p>{{ $product->long_description }}</p>
             </div>
+            
+ 
             {{-- abrir modal y que modal abrir --}}
-            <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalEditCart">
+             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalEditCart">
               <i class="material-icons">+ </i>añadir al carrito</button> 
-              {{--  <button type="button" class="btn btn-sm btn-primary" title="modal" data-cart="{{ $product->id }}">
-              <i class="material-icons">+ </i>añadir al carrito</button> --}}
+         
           </div>
         </div>
           
@@ -53,7 +54,7 @@
 </div>
 </div>
             <!-- Modal -->
-            <div class="modal fade"  id="modalEditCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal fade"  id="modalEditCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog" >
                 <div class="modal-content">
                   <div class="modal-header">
@@ -62,24 +63,28 @@
                   </div>
                   {{-- ruta absoluta --}}
                   {{-- accion al controlador metodo  store de cart_detail controller --}}
-                  <form action="{{ url("/cart") }}" method="POST">
-
+                   <form action="{{ url("/cart") }}" method="POST">
                     {{ csrf_field() }}
-                    {{-- campo oculto enviado --}}
-                    <input type="hidden" name="product_id" value="{{ $product->id }}">
                    
+                    {{-- campo oculto enviado --}}
+                   <input type="hidden" name="product_id" value="{{ $product->id }}">
+                
                     <div class="modal-body">
                       <input type="number" name="quantity" value="1" class="form-control">
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar compra</button>
+
+                     {{--  envia un formulario y agrega un detalle de carrito --}}
                       <button type="submit" class="btn btn-primary">añadir compra</button>
                     </div>
-                  </form>
+                  </form> 
 
-                </div>
+               </div>
               </div>
-            </div>
+            </div>  
+
+           
 @endsection
 @section('scripts')
     <script src="/js/product/addCart.js"></script>

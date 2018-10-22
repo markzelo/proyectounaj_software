@@ -45,7 +45,7 @@
                {{ csrf_field() }}
                {{ method_field('DELETE') }}
 
-               <a href="#" rel="tooltip" title="ver productos" class="btn btn-sm btn-danger" >
+               <a href="{{ url("/products/".$product->id) }}" rel="tooltip" title="ver productos" class="btn btn-sm btn-danger" >
                <span class="glyphicon glyphicon-eye-open"></span>
                 </a>
 
