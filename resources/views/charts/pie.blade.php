@@ -17,14 +17,16 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Tipo', 'Cantidad'],
+          ['TipoCuenta', 'Total'],
           @foreach ($datas as $data)
-            ['{{$data->Rol}}', {{$data->Usuarios}}],
+            ['{{$data->TipoCuenta}}', {{$data->Total}}],
           @endforeach
         ]);
 
         var options = {
-          title: 'Porcentaje de usuarios activos'
+          title: 'Distribución de usuarios',
+          chartArea: {left:300,top:80,width:'70%',height:'75%'},
+          titleTextStyle: {color: 'black', fontName: 'Arial', fontSize: 18}
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

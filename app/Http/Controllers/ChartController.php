@@ -18,19 +18,23 @@ class ChartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   public function index_pie()
+   public function pie()
     {
         
         $datas = DB::table('users')
-                        ->select(DB::raw('count(*) as Usuarios, role as Rol'))
-                        ->groupBy('Rol')
-                        ->get();
-
-        return view('/charts/pie', compact('datas'));
+                    ->select(DB::raw('
+                            CASE WHEN role = 0 THEN "Administradores"
+                            WHEN role = 1 THEN "Técnicos"
+                            WHEN role = 2 THEN "Clientes" END as TipoCuenta'),
+                    DB::raw('COUNT(*) as Total'))
+                    ->groupBy('role')
+                    ->get();
+        
+        return view ('/charts/pie', compact('datas'));
         
     }
 
-    public function index_line()
+    public function line()
     {
         
         $pastel = Product::all();
@@ -40,7 +44,7 @@ class ChartController extends Controller
         
     }
 
-    public function index_bar()
+    public function bar()
     {
         
         $pastel = Product::all();
@@ -50,7 +54,7 @@ class ChartController extends Controller
         
     }
 
-    public function index_area()
+    public function area()
     {
         
         $pastel = Product::all();
