@@ -69,13 +69,13 @@
                 <a><i class="fa fa-barcode fa-fw"></i> Sector compras<i class="fa fa-chevron-down"></i></a>
                 <ul class="nav nav-second-level">
                     <li @if(request()->is('listas')) class="active" @endif>
-                        <a href="/listas"><i class="fa fa-barcode fa-fw"></i> Catálogo de servicios para conpra</a>
+                        <a href="/listas"><i class="fa fa-barcode"></i> Catálogo de servicios para conpra</a>
                     </li> 
                     <li @if(request()->is('listas')) class="active" @endif>
-                        <a href="/listas"><i class="fa fa-cart-arrow-down fa-fw"></i> lista de pedidos</a>
+                        <a href="/carritodetalle"><i class="fa fa-cart-arrow-down"></i> detalle de carrito de compras</a>
                     </li> 
                     <li @if(request()->is('listas')) class="active" @endif>
-                        <a href="/listas"><i class="fa fa-cart-plus fa-fw"></i> mi carrito de compra</a>
+                        <a href="/listas"><i class="fa fa-cart-plus"></i> lista de pedidos hechos</a>
                     </li> 
                 </ul>
 
