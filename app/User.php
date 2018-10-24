@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Cart;
 
 class User extends Authenticatable
 {
@@ -108,11 +108,13 @@ class User extends Authenticatable
 
      //accesor para carritos
      public function  getCartIdAttribute(){
-      $this->carts()->where('status','Active')->first();
+      //carrito cuyo estado es activo del usuario
+      $cart=$this->carts()->where('status','Active')->first();
+      //si coincide hay un carrito activo
       if ($cart) 
-        return $cart;
+        return $cart->id;
 
-      //si no 
+      //si no se creea un nuevo carrito activo
       $cart=new Cart();
       $cart->status='Active';
       $cart->user_id=$this->id;

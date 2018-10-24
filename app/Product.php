@@ -35,4 +35,12 @@ class Product extends Model
         return "/images/products/default.jpg";
 
     }
+
+     public function cartdetail(){
+        return $this->hasMany(CartDetail::class);
+    }
+
+
+
+
 }
