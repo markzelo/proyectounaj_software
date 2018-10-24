@@ -9,6 +9,7 @@ use App\ProductImage;
 use App\CartDetail;
 use App\User;
 use App\Cart;
+use DB;
 
 class SaleProductController extends Controller
 {
@@ -31,11 +32,13 @@ class SaleProductController extends Controller
     
 
      // $my_cart_details=CartDetail::all();
-      //user_id =2     de tabla cart
-      $my_cart_details = CartDetail::where('cart_id',auth()->user()->id)->get();
-     
+      
+     //elegir el detalle que contiene el cartid del  id de car que tiene el user_id del usuario auth
+     $cart=Cart::where('user_id',$user->id)->get();
 
 
+      $my_cart_details = CartDetail::where('cart_id', 1)->get();
+    
 
 
      return view('products.index')->with(compact("my_cart_details"));
