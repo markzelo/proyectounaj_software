@@ -19,17 +19,18 @@
         <thead>
           <tr>
             <td class="text-center">#</td>
-            <th class=" text-center">Name</th>
            
-              <th class="col-md-2">Name</th>
+           
+              <th class="col-md-2">Nombre</th>
              
               <th >precio</th>
               <th >cantidad</th>
-              <th >opciones</th>
+              <th >total</th>
             </tr>
           </thead>
-          <tbody>
-            @foreach(auth()->user()->cart_details as $detail)
+          
+          <tbody id="dashboard_my_cart_details">
+            @foreach($my_cart_details as $detail)
             <tr>
               <td class="text-center">
                 <img src="{{ $detail->product->featured_image_url }}" height="50"></td>
@@ -41,7 +42,7 @@
              
               <td >&dollar;{{ $detail->product->price }}</td>
               <td>{{ $detail->quantity }}</td>
-               <td>{{ $detail->quantity * $detail->product->price}}</td>
+               <td>&dollar;{{ $detail->quantity * $detail->product->price}}</td>
               
               
            <td class="td_actions"
@@ -63,7 +64,7 @@
 
           </tbody>
         </table>
-       {{ $products->links() }}
+     
         </div>
         </div>
         
