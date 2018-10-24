@@ -32,7 +32,7 @@ class SaleProductController extends Controller
 
      // $my_cart_details=CartDetail::all();
       //user_id =2     de tabla cart
-      $my_cart_details = CartDetail::where('cart_id',$user->id)->get();
+      $my_cart_details = CartDetail::where('cart_id',auth()->user()->id)->get();
      
 
 
