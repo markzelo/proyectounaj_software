@@ -17,7 +17,7 @@ class IncidentsTableSeeder extends Seeder
         	'description' => 'jubo un desperfecto de cableado de red en las oficnas .',
         	'severity' => 'N',//niveles de severidad a n b 
             'organization' => 'administracion.',
-
+            
              //claves fk
         	'category_id' => 2,
         	'project_id' => 1,

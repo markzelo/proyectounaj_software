@@ -26,6 +26,11 @@
                                 <i class="fa fa-file-pdf-o fa-fw"></i> <span> Base de Conocimiento</span> </i>
                             </a>
                         </li>
+                         <li class="treeview">
+                             <a href='/youtube'>
+                                <i class="fa fa-file-pdf-o fa-fw"></i> <span> Contenido multimedia</span> </i>
+                            </a>
+                        </li>
                         <li class="treeview">
                                 <a><i class="fa fa-area-chart fa-fw"></i> Gráficas<i class="fa fa-chevron-down"></i></a>
                                 <ul class="nav nav-second-level">
@@ -64,6 +69,17 @@
                     </li>
                 </ul>
              </li>
+                
+                </li>
+                            <li class="treeview">
+                             <a href='/gmaps'>
+                            <i class="fa fa-calendar fa-fw"></i> <span> localizacion</span> </i>
+                            </a>
+                        </li> 
+
+
+
+
 
              <li>
                 <a><i class="fa fa-barcode fa-fw"></i> Sector compras<i class="fa fa-chevron-down"></i></a>
@@ -79,7 +95,7 @@
                     </li> 
                 </ul>
 
-                 </li>
+            </li>
 
 
               
@@ -99,7 +115,7 @@
                                 <a href="/proyectos"><i class="fa fa-folder fa-fw"></i> Proyectos</a>
                             </li>
                             <li>
-                                <a href="/config"><i class="fa fa-eye fa-fw"></i> Administración</a>
+                                <a href="/youtube"><i class="fa fa-eye fa-fw"></i> Administración</a>
                             </li>
                             <li class="treeview">
                                 <a href='/admin/products'>

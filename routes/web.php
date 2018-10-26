@@ -30,6 +30,11 @@ Route::get('/acerca-de', function () {
 
 Auth::routes();
 
+Route::get('/gmaps', ['as ' => 'gmaps', 'uses' => 'GmapsController@index']);
+
+Route::get('/youtube',array('uses' => 'YoutubeController@index', 'as' => 'youtube'));
+Route::post('/youtube',array('uses' => 'YoutubeController@search', 'as' => 'youtube.search'));
+
 //METODOS A LLAMAR PARA LAS FUNCIONES DE CARGA DE VISTAS
 Route::get('/home', 'HomeController@index');
 
