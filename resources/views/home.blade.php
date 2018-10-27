@@ -1,20 +1,179 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="pann">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <div class="panel-body">
 
-                    You are logged in!
+            @if(auth()->user()->is_support)
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;Hola {{Auth::user()->name}}</h3>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Reportadas a mi </h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Severidad</th>
+                                <th>Estado</th>
+                                <th>Fecha de creación</th>
+                                <th>Título</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dashboard_my_incidents">
+                            @foreach ($my_incidents as $incident)
+                                <tr>
+                                    <td>
+                                        <a href="/ver/{{ $incident->id }}">
+                                            {{ $incident->id }}
+                                        </a>
+                                    </td>
+                                    <td>{{ $incident->category->name}}</td>
+                                    <td>{{ $incident->severity_full }}</td>
+                                    <td>{{ $incident->state }}</td>
+                                    <td>{{ $incident->created_at }}</td>
+                                    <td>{{ $incident->title_short }}</td>
+                                </tr>
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Incidencias sin asignación</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Severidad</th>
+                                <th>Estado</th>
+                                <th>Fecha de creación</th>
+                                <th>Título</th>
+                                <th>Opción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dashboard_pending_incidents">
+                            @foreach ($pending_incidents as $incident)
+                                <tr>
+                                    <td>
+                                        <a href="/ver/{{ $incident->id }}">
+                                            {{ $incident->id }}
+                                        </a>
+                                    </td>
+                                    <td>{{ $incident->category->name}}</td>
+                                    <td>{{ $incident->severity_full }}</td>
+                                    <td>{{ $incident->state }}</td>
+                                    <td>{{ $incident->created_at }}</td>
+                                    <td>{{ $incident->title_short }}</td>
+                                    <td>
+                                        <a href="" class="btn btn-primary btn-sm">
+                                            Atender
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+           
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Incidencias imagenes</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tbody id="dashboard_image_incidents">
+                             <div class="row">
+                                  @foreach ($image_incidents as $incident)
+                                  <div class="col-md-4">
+                                    <div class="panel-body">
+
+                                        <td>
+                                            <img src="{{   url('/images/incidents/'. $incident->image) }}" alt="Thumbnail Image" class="rounded" width="250"> 
+                                            <h4 class="title">
+                                                <a href="{{ url("/incidents/". $incident->id) }}">{{ $incident->title }}<a/><br>
+                                                </h4>
+                                            </td>
+                                           
+
+                                        </div>
+                                  </div> 
+                                  @endforeach
+                             </div>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+             </div>
+
+
+
+
+
+
+
+
+            @endif
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Reportes de Incidencias hechos por mi</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Severidad</th>
+                                <th>Estado</th>
+                                <th>Fecha de creación</th>
+                                <th>Título</th>
+                                <th>Responsable</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dashboard_by_me">
+                            @foreach ($incidents_by_me as $incident)
+                                <tr>
+                                    <td>
+                                       
+                                         <a href="/ver/{{ $incident->id }}" class="btn btn-sm btn-primary" >
+                                           {{ $incident->id }} - <span class="glyphicon glyphicon-search"></span>
+                                        </a>
+                                    </td>
+                                    <td>{{ $incident->category_name}}</td>
+                                    <td>{{ $incident->severity_full }}</td>
+                                    <td>{{ $incident->state }}</td>
+                                    <td>{{ $incident->created_at }}</td>
+                                    <td>{{ $incident->title_short }}</td>
+                                    <td>
+                                        {{ $incident->support_id ?:"sin asignacion" }}
+                                    </td>
+                                </tr>
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

@@ -13,6 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+// Web API web services para editar
+Route::get('/proyecto/{id}/niveles', 'Admin\LevelController@byProject');
