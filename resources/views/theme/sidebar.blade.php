@@ -55,6 +55,21 @@
                         </li>
 
 
+                        <li id="liDeposito" class="treeview">
+                          <a href="#">
+                            <i class="fa fa-laptop"></i>
+                            <span>Deposito</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="liArticulos"><a href="{{url('deposito/articulo')}}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                            <li id="liCategorias"><a href="{{url('deposito/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                        </ul>
+                    </li>
+
+
+
+
                     </li>
 
                 @endif
