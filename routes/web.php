@@ -88,7 +88,9 @@ Route::post('/admin/products/{id}/images', 'ImageController@store');//guardar
 Route::delete('/admin/products/{id}/images', 'ImageController@destroy');//actualizar
 
 
-
+// deposito de recursos para tecnicos
+Route::resource('deposito/categoria','CategoriaController');
+Route::resource('deposito/articulo','ArticleController');
 
 
 

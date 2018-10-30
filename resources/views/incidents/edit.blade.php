@@ -41,8 +41,8 @@
                 </select>
             </div>
              <div class="form-group">
-                <label for="severity_id">Severidad</label>
-                <select name="severity_id" class="form-control">
+                <label for="severity">Severidad</label>
+                <select name="severity" class="form-control">
                    <option value="M" @if($incident->severity=='M') selected @endif>Menor</option>
                     <option value="N" @if($incident->severity=='N') selected @endif>Normal</option>
                     <option value="A" @if($incident->severity=='A') selected @endif>Alta</option>
@@ -56,6 +56,14 @@
                 <label for="description">Descripción</label>
                 <textarea name="description" class="form-control">{{ old('description', $incident->description) }}</textarea>
             </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="image">Imagen</label>
+                            <input type="file" name="photo" required>
+                            
+                        </div>
+                        
+                    </div>
             <div class="form-group">
                 <button class="btn btn-primary">Guardar Cambios</button>
             </div>
