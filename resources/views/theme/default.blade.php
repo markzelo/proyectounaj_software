@@ -91,8 +91,43 @@
 
 
         <div id="page-wrapper">
+            
+          
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Scit</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                                  <!--Contenido-->
+                              @yield('content')
+                                  <!--Fin Contenido-->
+                           </div>
+                        </div>
+                            
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
 
-            @yield('content')
+
+
+
+
+
+
+          {{--   @yield('content') --}}
              
 
         </div>
@@ -107,11 +142,10 @@
 
     <!-- /#wrapper -->
 
-
-
     <!-- jQuery -->
-
     <script src="{!! asset('theme/vendor/jquery/jquery.min.js') !!}"></script>
+
+   
 
 
 
@@ -119,6 +153,7 @@
 
     <script src="{!! asset('theme/vendor/bootstrap/js/bootstrap.min.js') !!}"></script>
 
+    
 
 
     <!-- Metis Menu Plugin JavaScript -->
@@ -147,8 +182,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
 
+
+
+   
+    
+   
+    
+   
+
    
  @yield('scripts')
+
+
 
 </body>
 

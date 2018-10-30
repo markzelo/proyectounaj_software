@@ -79,7 +79,7 @@
 
 
 
-
+ @if ( auth()->user()->is_client)
 
              <li>
                 <a><i class="fa fa-barcode fa-fw"></i> Sector compras<i class="fa fa-chevron-down"></i></a>
@@ -98,7 +98,7 @@
             </li>
 
 
-              
+               @endif
 
 
                 <!-- admin -->

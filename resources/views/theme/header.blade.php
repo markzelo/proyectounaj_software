@@ -34,6 +34,7 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 {{ Auth::user()->name }} <span class="caret"></span>
+                
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li>
@@ -57,8 +58,6 @@
      <ul class="nav navbar-nav">
          <!-- si el usuario se autentifica admin o tecnico asisgnacion de proyecto con selector-->
         @if(auth()->check())
-       
-
             <form class="navbar-form">
                 <div class="form-group">
                   <select id="list-of-projects" class="form-control">
@@ -71,7 +70,6 @@
                   </select>
                 </div>
             </form>
-      
         @endif()
     </ul>
 

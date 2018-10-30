@@ -43,6 +43,11 @@ return [
 
     'disks' => [
 
+        'pdfFiles' => [
+            'driver' => 'local',
+            'root' => public_path('pdfFiles'),
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

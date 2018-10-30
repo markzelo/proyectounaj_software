@@ -179,4 +179,9 @@
         </div>
     </div>
 </div>
+  
+@endsection
+@section('scripts')
+    <!-- AdminLTE App -->
+    <script src="{{asset('js/app.min.js')}}"></script>
 @endsection
