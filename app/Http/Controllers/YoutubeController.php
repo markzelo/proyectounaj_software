@@ -8,6 +8,11 @@ use Madcoda\Youtube\Youtube;
 
 class YoutubeController extends Controller
 {
+    //solo usuarios administradores acceden opcion:auth,admin,etc
+   public function __construct()
+    {
+        $this->middleware('admin');
+    }
     
      public function index()
      {

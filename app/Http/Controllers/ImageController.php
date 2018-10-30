@@ -10,6 +10,12 @@ use File;
 
 class ImageController extends Controller
 {
+    //solo usuarios administradores acceden opcion:auth,admin,etc
+   public function __construct()
+    {
+        $this->middleware('admin');
+    }
+    
     public function index($id){
     	$product= Product::find($id);
     	$images= $product->images;

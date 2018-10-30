@@ -14,6 +14,12 @@ use Charts ,App\User;
  
 class ChartController extends Controller
 {
+    //solo usuarios administradores acceden opcion:auth,admin,etc
+   public function __construct()
+    {
+        $this->middleware('admin');
+    }
+    
     /**
      * Display a listing of the resource.
      *

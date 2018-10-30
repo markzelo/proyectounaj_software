@@ -12,4 +12,9 @@ class InstructionController extends Controller
         return view('guest/instruction');
     }
 
+    public function about()
+    {
+        return view('guest/credits');
+    }
+
 }

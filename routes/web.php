@@ -15,16 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/instrucciones', function () {
-//     return view('instructions');
-// });
-
-Route::get('/acerca-de', function () {
-    return view('guest/credits');
-});
 
 //---------------------------------------------------------------
-
 
 
 
@@ -127,7 +119,7 @@ Route::post('/events', 'EventController@addEvent')->name('events.add');
 //damos acceso diferente como admini
 //name space para los 3 cotroladores
 //----------permisos de admin
-Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
+Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function () {
 
 	 // derechos sobre usuarios----------------------------------
     Route::get('/usuarios', 'UserController@index');
@@ -175,4 +167,5 @@ Route::group(['middleware' => 'auth',"namespace"=>"Admin"], function () {
 
 Route::group(['middleware' => 'guest',"namespace"=>"Guest"], function () {
     Route::get('/instrucciones', 'InstructionController@index');
+    Route::get('/acerca-de', 'InstructionController@about');
 });
