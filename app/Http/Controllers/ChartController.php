@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use DB;
+use Auth;
 
 
 use App\Http\Controllers\Controller;
@@ -18,9 +19,20 @@ class ChartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   public function pie()
+   public function general()
     {
-        
+        // Total de incidentes en curso por tipo de usuarios
+        $datos = DB::table('users')
+                    ->select(DB::raw('
+                            CASE WHEN role = 0 THEN "Administradores"
+                            WHEN role = 1 THEN "Técnicos"
+                            WHEN role = 2 THEN "Clientes" END as TipoCuenta'),
+                    DB::raw('COUNT(*) as Total'))
+                    ->join('incidents', 'users.id', '=', 'client_id')
+                    ->groupBy('role')
+                    ->get();
+
+        // Total de usuarios por tipo de cuenta
         $datas = DB::table('users')
                     ->select(DB::raw('
                             CASE WHEN role = 0 THEN "Administradores"
@@ -29,10 +41,23 @@ class ChartController extends Controller
                     DB::raw('COUNT(*) as Total'))
                     ->groupBy('role')
                     ->get();
+
+        // Estado de los incidentes por tipo de usuarios
+        $incidents = DB::table('users')
+                    ->select(DB::raw('
+                            CASE WHEN role = 0 THEN "Administradores"
+                            WHEN role = 1 THEN "Técnicos"
+                            WHEN role = 2 THEN "Clientes" END as TipoCuenta'),
+                    DB::raw('SUM(incidents.active = 1) as TotalEnCurso'),
+                    DB::raw('SUM(incidents.active = 0) as TotalFinalizada'))
+                    ->join('incidents', 'users.id', '=', 'client_id')
+                    ->groupBy('role')
+                    ->get();
         
-        return view ('/charts/pie', compact('datas'));
+        return view ('/charts/general', compact('datos','datas','dates','incidents'));
         
     }
+
 
     public function line()
     {
@@ -44,13 +69,22 @@ class ChartController extends Controller
         
     }
 
-    public function bar()
+    public function incidents()
     {
+        //usuario actual
+        $idusuario = Auth::user()->id;
+
+        // total de mis incidentes en curso/finalizadas por dia de la semana
+        $datos = DB::table('users')
+                    ->select(DB::raw('DAYNAME(incidents.created_at) as Dia'),
+                    DB::raw('SUM(incidents.active = 1) as TotalEnCurso'),
+                    DB::raw('SUM(incidents.active = 0) as TotalFinalizada'))
+                    ->join('incidents', 'users.id', '=', 'client_id')
+                    ->where('incidents.client_id', '=', $idusuario)
+                    ->groupBy('Dia')
+                    ->get();
         
-        $pastel = Product::all();
-                  // select('products.name','producto_venta.venta')
-                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
-        return view('/charts/bar',['pastel'=>$pastel]);
+        return view('/charts/incidents',compact('datos'));
         
     }
 
@@ -61,6 +95,31 @@ class ChartController extends Controller
                   // select('products.name','producto_venta.venta')
                   // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
         return view('/charts/area',['pastel'=>$pastel]);
+        
+    }
+
+    public function table()
+    {
+        
+        // Listado de usuarios clientes
+
+       $datos = DB::table('users')
+                    ->select(DB::raw('
+                            CASE WHEN role = 0 THEN "Administrador"
+                            WHEN role = 1 THEN "Técnico"
+                            WHEN role = 2 THEN "Cliente" END as TipoCuenta'),
+                            'users.name as Usuario',
+                            'projects.name as Proyecto',
+                            'projects.description as Descripcion')
+                    ->leftjoin('projects', 'selected_project_id', '=', 'projects.id')
+                    ->whereBetween('role', [0, 2])
+                    ->groupBy('role')
+                    ->groupBy('users.name')
+                    ->groupBy('projects.name')
+                    ->groupBy('projects.description')
+                    ->get();
+        
+        return view ('/charts/table', compact('datos'));
         
     }
 

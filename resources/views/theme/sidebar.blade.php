@@ -35,16 +35,16 @@
                                 <a><i class="fa fa-area-chart fa-fw"></i> Gráficas<i class="fa fa-chevron-down"></i></a>
                                 <ul class="nav nav-second-level">
                                     <li @if(request()->is('charts')) class="active" @endif>
-                                        <a href="/pie"><i class="fa fa-pie-chart fa-fw"></i> Circular</a>
+                                        <a href="/general"><i class="fa fa-pie-chart fa-fw"></i> General</a>
                                     </li> 
                                     <li @if(request()->is('charts')) class="active" @endif>
                                         <a href="/line"><i class="fa fa-line-chart fa-fw"></i> Líneas</a>
                                     </li> 
                                     <li @if(request()->is('charts')) class="active" @endif>
-                                        <a href="/bar"><i class="fa fa-bar-chart fa-fw"></i> Barras</a>
+                                        <a href="/incidents"><i class="fa fa-bar-chart fa-fw"></i> Incidentes</a>
                                     </li>
                                     <li @if(request()->is('charts')) class="active" @endif>
-                                        <a href="/area"><i class="fa fa-area-chart fa-fw"></i> Área</a>
+                                        <a href="/table"><i class="fa fa-table fa-fw"></i> Tabla de usuarios</a>
                                     </li>
                                 </ul>
                         </li>
