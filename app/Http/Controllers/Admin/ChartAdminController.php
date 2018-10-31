@@ -1,6 +1,6 @@
 <?php
  
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
  
 use Illuminate\Http\Request;
 
@@ -12,7 +12,7 @@ use Auth;
 use App\Http\Controllers\Controller;
 use Charts ,App\User;
  
-class ChartController extends Controller
+class ChartAdminController extends Controller
 {
     //solo usuarios administradores acceden opcion:auth,admin,etc
    public function __construct()
@@ -60,49 +60,10 @@ class ChartController extends Controller
                     ->groupBy('role')
                     ->get();
         
-        return view ('/charts/general', compact('datos','datas','dates','incidents'));
+        return view ('Admin/charts/general', compact('datos','datas','dates','incidents'));
         
     }
 
-
-    public function line()
-    {
-        
-        $pastel = Product::all();
-                  // select('products.name','producto_venta.venta')
-                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
-        return view('/charts/line',['pastel'=>$pastel]);
-        
-    }
-
-    public function incidents()
-    {
-        //usuario actual
-        $idusuario = Auth::user()->id;
-
-        // total de mis incidentes en curso/finalizadas por dia de la semana
-        $datos = DB::table('users')
-                    ->select(DB::raw('DAYNAME(incidents.created_at) as Dia'),
-                    DB::raw('SUM(incidents.active = 1) as TotalEnCurso'),
-                    DB::raw('SUM(incidents.active = 0) as TotalFinalizada'))
-                    ->join('incidents', 'users.id', '=', 'client_id')
-                    ->where('incidents.client_id', '=', $idusuario)
-                    ->groupBy('Dia')
-                    ->get();
-        
-        return view('/charts/incidents',compact('datos'));
-        
-    }
-
-    public function area()
-    {
-        
-        $pastel = Product::all();
-                  // select('products.name','producto_venta.venta')
-                  // ->join('products','products.id', '=', 'producto_venta.products_id')->get();
-        return view('/charts/area',['pastel'=>$pastel]);
-        
-    }
 
     public function table()
     {
@@ -125,7 +86,26 @@ class ChartController extends Controller
                     ->groupBy('projects.description')
                     ->get();
         
-        return view ('/charts/table', compact('datos'));
+        return view ('Admin/charts/table', compact('datos'));
+        
+    }
+
+    public function incidents()
+    {
+        //usuario actual
+        $idusuario = Auth::user()->id;
+
+        // total de mis incidentes en curso/finalizadas por dia de la semana
+        $datos = DB::table('users')
+                    ->select(DB::raw('DAYNAME(incidents.created_at) as Dia'),
+                    DB::raw('SUM(incidents.active = 1) as TotalEnCurso'),
+                    DB::raw('SUM(incidents.active = 0) as TotalFinalizada'))
+                    ->join('incidents', 'users.id', '=', 'client_id')
+                    ->where('incidents.client_id', '=', $idusuario)
+                    ->groupBy('Dia')
+                    ->get();
+        
+        return view('admin/charts/incidents',compact('datos'));
         
     }
 

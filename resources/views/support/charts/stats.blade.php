@@ -5,7 +5,7 @@
 @section('content')
 <div class="pann"></div>
 <div class="panel panel-primary">
-  <div class="panel-heading">Charts</div>
+  <div class="panel-heading">Mi rendimiento</div>
 
 <html>
   <head>
@@ -16,15 +16,14 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
+          ['Dia', 'En curso', 'Finalizada'],
+          @foreach ($datos as $dato)
+            ['{{$dato->Dia}}', {{$dato->TotalEnCurso}}, {{$dato->TotalFinalizada}}],
+          @endforeach
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'Rendimiento diario',
           curveType: 'function',
           legend: { position: 'bottom' }
         };

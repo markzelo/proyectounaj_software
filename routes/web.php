@@ -101,11 +101,6 @@ Route::get('/download-pdf', ['as'=>'DownloadPDF','uses'=>'PdfDemoController@down
 Route::get('/html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'PdfDemoController@htmlToPDF']);
 
 
-//graficas
-Route::get('/general', 'ChartController@general');
-Route::get('/line', 'ChartController@line');
-Route::get('/table', 'ChartController@table');
-Route::get('/incidents', 'ChartController@incidents');
 
 
 //eventos--------------------------------------------------------------
@@ -158,11 +153,20 @@ Route::group(['middleware' => 'admin',"namespace"=>"Admin"], function () {
     Route::post('/proyecto-usuario', 'ProjectUserController@store');
     Route::post('/proyecto-usuario/{id}/eliminar', 'ProjectUserController@delete');
 
-
+    //graficas
+    Route::get('/general', 'ChartAdminController@general');
+    Route::get('/table', 'ChartAdminController@table');
+    Route::get('/incidents', 'ChartAdminController@incidents');
 
 
 	Route::get('/config', 'ConfigController@index');
     
+});
+
+Route::group(['middleware' => 'support',"namespace"=>"Support"], function () {
+    //graficas
+    Route::get('/my-stats', 'ChartSupportController@stats');
+    Route::get('/my-incidents', 'ChartSupportController@incidents');
 });
 
 Route::group(['middleware' => 'guest',"namespace"=>"Guest"], function () {

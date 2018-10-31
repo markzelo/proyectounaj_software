@@ -5,7 +5,7 @@
 @section('content')
 <div class="pann"></div>
 <div class="panel panel-primary">
-  <div class="panel-heading">Tabla de usuarios</div>
+  <div class="panel-heading">Lista de usuarios</div>
 
 <html>
   <head>
