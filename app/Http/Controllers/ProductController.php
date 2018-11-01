@@ -7,11 +7,6 @@ use App\Product;
 
 class ProductController extends Controller
 {
-    //solo usuarios administradores acceden opcion:auth,admin,etc
-   public function __construct()
-    {
-        $this->middleware('admin');
-    }
     
      public function index(){
     $products=Product::paginate(5);

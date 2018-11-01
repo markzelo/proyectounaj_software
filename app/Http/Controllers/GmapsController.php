@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class GmapsController extends Controller
 {
-    //solo usuarios administradores acceden opcion:auth,admin,etc
-   public function __construct()
-    {
-        $this->middleware('admin');
-    }
     
     public function index(){
     	$config = array();
